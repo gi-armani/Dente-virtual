@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6fba138c207954da8e90b4865c877e, type: 3}
-  m_Name: GrapeFluorQuantity
+  m_Name: TuttiFruttiQuantity
   m_EditorClassIdentifier: 
   Value: 5
