@@ -5,19 +5,20 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
-public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
     public IntVariable Quantity;
     [SerializeField] private TextMeshProUGUI QuantityText;
     [SerializeField] private Image DragImage;
+
+    private Camera _mainCamera = null;
 
     private void OnEnable() {
         QuantityText.text = "x" + Quantity.Value.ToString();
     }
 
-    void Start() {
-    }
-
-    void Update() {
+    private void Awake() {
+        _mainCamera = Camera.main;
+        DragImage.raycastTarget = false;
     }
 
     public void UseMedicine() {
@@ -38,20 +39,17 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 position = Camera.main.ScreenToWorldPoint(eventData.position);
-        position.z = 1;
+        Vector3 position = _mainCamera.ScreenToWorldPoint(eventData.position);
+        position.z = _mainCamera.transform.position.z + 1;
         DragImage.transform.position = position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Verifica se está emcima do dentinho
-        
-
-        //Se sim, usa o remedio
-
         // "devolve" a imagem
         DragImage.transform.position = transform.position;
         DragImage.gameObject.SetActive(false);
     }
+
+    public void OnDrop() => UseMedicine();
 }
