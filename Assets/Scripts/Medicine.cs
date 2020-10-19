@@ -10,11 +10,15 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     [SerializeField] private TextMeshProUGUI QuantityText;
     [SerializeField] private Image DragImage;
 
+    private Camera _mainCamera = null;
+
     private void OnEnable() {
         QuantityText.text = "x" + Quantity.Value.ToString();
     }
 
-    void Start() {
+    private void Awake()
+    {
+        _mainCamera = Camera.main;
     }
 
     void Update() {
@@ -28,7 +32,7 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        UseMedicine();
+        //UseMedicine();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -38,7 +42,7 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 position = Camera.main.ScreenToWorldPoint(eventData.position);
+        Vector3 position = _mainCamera.ScreenToWorldPoint(eventData.position);
         position.z = 1;
         DragImage.transform.position = position;
     }
@@ -46,9 +50,17 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     public void OnEndDrag(PointerEventData eventData)
     {
         // Verifica se está emcima do dentinho
-        
-
+        Ray screenPointRay = _mainCamera.ScreenPointToRay(eventData.position);
+        RaycastHit hitInfo = default;
+        Debug.Log(screenPointRay + "origin: " + screenPointRay.origin);
+        screenPointRay.origin = new Vector3(screenPointRay.origin.x, screenPointRay.origin.y, transform.position.z);
         //Se sim, usa o remedio
+        if(Physics.Raycast(screenPointRay, out hitInfo))
+        {
+            UseMedicine();
+        }
+        Debug.Log(hitInfo.point);
+
 
         // "devolve" a imagem
         DragImage.transform.position = transform.position;
