@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e165579679ab70438aef96b6a3e7d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FillPercentage: {fileID: 11400000, guid: f9aae5476571cc340af7dc5c85424597, type: 2}
+  BarValues: {fileID: 0}
 --- !u!1 &415660099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 476764297376622272, guid: b881973e4be04cb4d835b2884bf735eb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 476764297376622272, guid: b881973e4be04cb4d835b2884bf735eb,
         type: 3}

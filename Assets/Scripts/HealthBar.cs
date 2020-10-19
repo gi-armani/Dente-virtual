@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
-    public FloatVariable FillPercentage;
+    public BarValues BarValues;
+
     GameObject fillBar;
     bool isDecaying = false;
 
@@ -18,16 +19,15 @@ public class HealthBar : MonoBehaviour {
         }
     }
 
-    void UpdateFill() {
+    public void UpdateFill() {
         Image img = fillBar.GetComponent<Image>();
-        img.fillAmount = FillPercentage.Value;
+        img.fillAmount = BarValues.FillPercentage;
     }
 
-    // REFATORAR SE DER CERTO
     IEnumerator Decay() {
         isDecaying = true;
-        yield return new WaitForSeconds(2f);
-        FillPercentage.DecreaseValue(0.05f);
+        yield return new WaitForSeconds(BarValues.DecayCooldown);
+        BarValues.AddFillPercentage(-BarValues.DecayQuantity);
         UpdateFill();
         isDecaying = false;
     }

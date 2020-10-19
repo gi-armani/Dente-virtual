@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
     public IntVariable Quantity;
+    public BarValues MedBarValues;
+    public HealthBar MedHealthBar;
+    private float healQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText;
     [SerializeField] private Image DragImage;
 
@@ -26,26 +29,25 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
             Quantity.DecreaseValue();
             QuantityText.text = "x" + Quantity.Value.ToString();
         }
+        MedBarValues.AddFillPercentage(healQuantity);
+        MedHealthBar.UpdateFill();
     }
 
     public void OnPointerClick(PointerEventData eventData) {
         UseMedicine();
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
+    public void OnBeginDrag(PointerEventData eventData) {
         DragImage.gameObject.SetActive(true);
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
+    public void OnDrag(PointerEventData eventData) {
         Vector3 position = _mainCamera.ScreenToWorldPoint(eventData.position);
         position.z = _mainCamera.transform.position.z + 1;
         DragImage.transform.position = position;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
+    public void OnEndDrag(PointerEventData eventData) {
         // "devolve" a imagem
         DragImage.transform.position = transform.position;
         DragImage.gameObject.SetActive(false);

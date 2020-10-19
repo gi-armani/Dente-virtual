@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b6d97cfb6578a4ca749a6084e3ace9, type: 3}
-  m_Name: MedHealth
+  m_Script: {fileID: 11500000, guid: 11e25ae7dcc1cc44686394542173e6d3, type: 3}
+  m_Name: MedBarValues
   m_EditorClassIdentifier: 
-  Value: 1
+  FillPercentage: 0
+  DecayCooldown: 0
+  DecayQuantity: 0
