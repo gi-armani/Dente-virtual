@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,12 @@ public class BarValues : ScriptableObject {
     public float DecayCooldown;
     public float DecayQuantity;
 
+    public Action OnFillChange;
+
     public void AddFillPercentage(float quantity = 0.1f) {
         FillPercentage += quantity;
+        FillPercentage = Mathf.Clamp(FillPercentage, 0f, 1f);
 
-        if (FillPercentage < 0) {
-            FillPercentage = 0;
-        }
-        else if (FillPercentage > 1) {
-            FillPercentage = 1;
-        }
+        OnFillChange?.Invoke();
     }
 }

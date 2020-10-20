@@ -9,9 +9,10 @@ public class HealthBar : MonoBehaviour {
     GameObject fillBar;
     bool isDecaying = false;
 
-    void Start() {
+    void Awake() {
         fillBar = GameObject.FindWithTag("FillBar");
     }
+
 
     void Update() {
         if (!isDecaying) {
@@ -30,5 +31,14 @@ public class HealthBar : MonoBehaviour {
         BarValues.AddFillPercentage(-BarValues.DecayQuantity);
         UpdateFill();
         isDecaying = false;
+    }
+
+    private void OnEnable() {
+        UpdateFill();
+        BarValues.OnFillChange += UpdateFill;
+    }
+
+    private void OnDisable() {
+        BarValues.OnFillChange -= UpdateFill;
     }
 }
