@@ -5,15 +5,15 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
-public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
+public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
     public IntVariable Quantity;
     public BarValues MedBarValues;
-    public HealthBar MedHealthBar;
     private float healQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText;
     [SerializeField] private Image DragImage;
 
     private Camera _mainCamera = null;
+    private bool isDragging;
 
     private void OnEnable() {
         QuantityText.text = "x" + Quantity.Value.ToString();
@@ -28,17 +28,19 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         if (Quantity.Value > 0) {
             Quantity.DecreaseValue();
             QuantityText.text = "x" + Quantity.Value.ToString();
+            MedBarValues.AddFillPercentage(healQuantity);
         }
-        MedBarValues.AddFillPercentage(healQuantity);
-        MedHealthBar.UpdateFill();
-    }
-
-    public void OnPointerClick(PointerEventData eventData) {
-        UseMedicine();
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-        DragImage.gameObject.SetActive(true);
+        if(Quantity.Value > 0)
+        {
+            DragImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            eventData.pointerDrag = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -48,10 +50,13 @@ public class Medicine : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     }
 
     public void OnEndDrag(PointerEventData eventData) {
-        // "devolve" a imagem
         DragImage.transform.position = transform.position;
         DragImage.gameObject.SetActive(false);
     }
 
-    public void OnDrop() => UseMedicine();
+    public void OnDrop()
+    {
+        Debug.Log("is Dropping");
+        UseMedicine();
+    }
 }
