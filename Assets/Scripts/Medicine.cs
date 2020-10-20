@@ -54,9 +54,5 @@ public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         DragImage.gameObject.SetActive(false);
     }
 
-    public void OnDrop()
-    {
-        Debug.Log("is Dropping");
-        UseMedicine();
-    }
+    public void OnDrop() => UseMedicine();
 }
