@@ -57,6 +57,7 @@ jobs:
         with:
           unityVersion: 2019.4.11f1
           targetPlatform: Android
+          allowDirtyBuild: true
       
       # Upload Build Artifact  
       - name: Upload Build
