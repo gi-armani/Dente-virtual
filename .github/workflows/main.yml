@@ -57,7 +57,6 @@ jobs:
         with:
           unityVersion: 2019.4.11f1
           targetPlatform: Android
-          versioning: Semantic
       
       # Upload Build Artifact  
       - name: Upload Build
