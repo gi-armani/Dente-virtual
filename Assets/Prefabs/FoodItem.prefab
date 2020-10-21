@@ -64,8 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4201181039601258628, guid: b4a99fc36fe062d4f8c2238997bd8cb0,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: a19b0542d270e164ab36ea22719055aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -221,7 +220,7 @@ GameObject:
   - component: {fileID: 2155139964992749097}
   - component: {fileID: 2155139964992749271}
   m_Layer: 5
-  m_Name: MedicineItem
+  m_Name: FoodItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,8 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4201181039601258628, guid: b4a99fc36fe062d4f8c2238997bd8cb0,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: a19b0542d270e164ab36ea22719055aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -298,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59274742c6f7ab24190442e1a8292a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 11400000, guid: 54c5e4504c3726ba1bbf8d059cfd4124, type: 2}
+  Quantity: {fileID: 11400000, guid: fc021072b452d4f4c97ce293f6bcef1d, type: 2}
   BarValues: {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}

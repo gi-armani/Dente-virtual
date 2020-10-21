@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
-    public IntVariable Quantity;
+    public GenericInventory Inventory;
     public BarValues BarValues;
     private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText;
@@ -15,26 +15,28 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Camera _mainCamera = null;
     private bool isDragging;
 
-    private void OnEnable() {
-        QuantityText.text = "x" + Quantity.Value.ToString();
+    private void OnEnable()
+    {
+        QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
     }
 
-    private void Awake() {
+    private void Awake() 
+    {
         _mainCamera = Camera.main;
         DragImage.raycastTarget = false;
     }
 
     public void UseItem() {
-        if (Quantity.Value > 0) {
-            Quantity.DecreaseValue();
-            QuantityText.text = "x" + Quantity.Value.ToString();
+        if (Inventory.GetQuantity(gameObject.name) > 0) {
+            Inventory.AddValue(gameObject.name, -1);
+            QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
             BarValues.AddFillPercentage(fillQuantity);
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData) 
     {
-        if(Quantity.Value > 0)
+        if(Inventory.GetQuantity(gameObject.name) > 0)
         {
             DragImage.gameObject.SetActive(true);
         }
