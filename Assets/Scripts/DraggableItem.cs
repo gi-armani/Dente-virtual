@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
-public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
     public IntVariable Quantity;
-    public BarValues MedBarValues;
-    private float healQuantity = 0.2f;
+    public BarValues BarValues;
+    private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText;
     [SerializeField] private Image DragImage;
 
@@ -24,15 +24,16 @@ public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         DragImage.raycastTarget = false;
     }
 
-    public void UseMedicine() {
+    public void UseItem() {
         if (Quantity.Value > 0) {
             Quantity.DecreaseValue();
             QuantityText.text = "x" + Quantity.Value.ToString();
-            MedBarValues.AddFillPercentage(healQuantity);
+            BarValues.AddFillPercentage(fillQuantity);
         }
     }
 
-    public void OnBeginDrag(PointerEventData eventData) {
+    public void OnBeginDrag(PointerEventData eventData) 
+    {
         if(Quantity.Value > 0)
         {
             DragImage.gameObject.SetActive(true);
@@ -54,5 +55,5 @@ public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         DragImage.gameObject.SetActive(false);
     }
 
-    public void OnDrop() => UseMedicine();
+    public void OnDrop() => UseItem();
 }
