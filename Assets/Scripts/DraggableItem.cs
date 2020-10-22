@@ -5,18 +5,18 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
-public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
-    public IntVariable Quantity;
-    public BarValues MedBarValues;
-    private float healQuantity = 0.2f;
-    [SerializeField] private TextMeshProUGUI QuantityText;
-    [SerializeField] private Image DragImage;
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
+    public Inventory Inventory;
+    public BarValues BarValues;
+    private float fillQuantity = 0.2f;
+    [SerializeField] private TextMeshProUGUI QuantityText = null;
+    [SerializeField] private Image DragImage = null;
 
     private Camera _mainCamera = null;
     private bool isDragging;
 
     private void OnEnable() {
-        QuantityText.text = "x" + Quantity.Value.ToString();
+        QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
     }
 
     private void Awake() {
@@ -24,21 +24,19 @@ public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         DragImage.raycastTarget = false;
     }
 
-    public void UseMedicine() {
-        if (Quantity.Value > 0) {
-            Quantity.DecreaseValue();
-            QuantityText.text = "x" + Quantity.Value.ToString();
-            MedBarValues.AddFillPercentage(healQuantity);
+    public void UseItem() {
+        if (Inventory.GetQuantity(gameObject.name) > 0) {
+            Inventory.AddValue(gameObject.name, -1);
+            QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
+            BarValues.AddFillPercentage(fillQuantity);
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-        if(Quantity.Value > 0)
-        {
+        if (Inventory.GetQuantity(gameObject.name) > 0) {
             DragImage.gameObject.SetActive(true);
         }
-        else
-        {
+        else {
             eventData.pointerDrag = null;
         }
     }
@@ -54,5 +52,5 @@ public class Medicine : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         DragImage.gameObject.SetActive(false);
     }
 
-    public void OnDrop() => UseMedicine();
+    public void OnDrop() => UseItem();
 }

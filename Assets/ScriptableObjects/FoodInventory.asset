@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6fba138c207954da8e90b4865c877e, type: 3}
-  m_Name: GrapeFluorQuantity
+  m_Script: {fileID: 11500000, guid: af197c5a6b5a3174cb547caa0f508f61, type: 3}
+  m_Name: FoodInventory
   m_EditorClassIdentifier: 
-  Value: 10
+  InventoryList:
+  - itemName: Apple
+    amount: 15
+  - itemName: Banana
+    amount: 4
