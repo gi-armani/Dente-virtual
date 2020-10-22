@@ -40,5 +40,6 @@ public class HealthBar : MonoBehaviour {
 
     private void OnDisable() {
         BarValues.OnFillChange -= UpdateFill;
+        isDecaying = false;
     }
 }
