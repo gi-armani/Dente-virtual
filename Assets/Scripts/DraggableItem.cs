@@ -9,8 +9,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public GenericInventory Inventory;
     public BarValues BarValues;
     private float fillQuantity = 0.2f;
-    [SerializeField] private TextMeshProUGUI QuantityText;
-    [SerializeField] private Image DragImage;
+    [SerializeField] private TextMeshProUGUI QuantityText = null;
+    [SerializeField] private Image DragImage = null;
 
     private Camera _mainCamera = null;
     private bool isDragging;
