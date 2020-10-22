@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59274742c6f7ab24190442e1a8292a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 11400000, guid: 54c5e4504c3726ba1bbf8d059cfd4124, type: 2}
+  Inventory: {fileID: 11400000, guid: cd46e6b507bb4af43b9a6620e232005a, type: 2}
   BarValues: {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}

@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropable {
-    public GenericInventory Inventory;
+    public Inventory Inventory;
     public BarValues BarValues;
     private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText = null;
@@ -15,13 +15,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Camera _mainCamera = null;
     private bool isDragging;
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
     }
 
-    private void Awake() 
-    {
+    private void Awake() {
         _mainCamera = Camera.main;
         DragImage.raycastTarget = false;
     }
@@ -34,14 +32,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    public void OnBeginDrag(PointerEventData eventData) 
-    {
-        if(Inventory.GetQuantity(gameObject.name) > 0)
-        {
+    public void OnBeginDrag(PointerEventData eventData) {
+        if (Inventory.GetQuantity(gameObject.name) > 0) {
             DragImage.gameObject.SetActive(true);
         }
-        else
-        {
+        else {
             eventData.pointerDrag = null;
         }
     }
