@@ -15,7 +15,7 @@ namespace Tests
             // Prepare
             Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
             const string itemName = "not_in_list_item";
-            
+
             // Act
             inventory.AddValue(itemName, 10);
 

@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBar : MonoBehaviour
+{
     public BarValues BarValues;
 
     GameObject fillBar;
     bool isDecaying = false;
 
-    void Awake() {
+    void Awake()
+    {
         fillBar = GameObject.FindWithTag("FillBar");
     }
 
 
-    void Update() {
-        if (!isDecaying) {
+    void Update()
+    {
+        if (!isDecaying)
+        {
             StartCoroutine(Decay());
         }
     }
 
-    public void UpdateFill() {
+    public void UpdateFill()
+    {
         Image img = fillBar.GetComponent<Image>();
         img.fillAmount = BarValues.FillPercentage;
     }
 
-    IEnumerator Decay() {
+    IEnumerator Decay()
+    {
         isDecaying = true;
         yield return new WaitForSeconds(BarValues.DecayCooldown);
         BarValues.AddFillPercentage(-BarValues.DecayQuantity);
@@ -33,12 +39,14 @@ public class HealthBar : MonoBehaviour {
         isDecaying = false;
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         UpdateFill();
         BarValues.OnFillChange += UpdateFill;
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         BarValues.OnFillChange -= UpdateFill;
         isDecaying = false;
     }
