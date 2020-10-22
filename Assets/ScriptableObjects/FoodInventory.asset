@@ -14,6 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryList:
   - itemName: Apple
-    amount: 80
+    amount: 77
   - itemName: Banana
-    amount: 85
+    amount: 83
+  - itemName: Salad
+    amount: 83
+  - itemName: Grape
+    amount: 83
+  - itemName: Water
+    amount: 83
+  - itemName: Carrot
+    amount: 83
+  - itemName: Brigadeiro
+    amount: 83
+  - itemName: Candy
+    amount: 83
+  - itemName: Lollipop
+    amount: 83
+  - itemName: Soda
+    amount: 83
+  - itemName: Cookie
+    amount: 83
+  - itemName: Chips
+    amount: 83
