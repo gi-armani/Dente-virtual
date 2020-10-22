@@ -22,6 +22,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private void Awake() {
         _mainCamera = Camera.main;
         DragImage.raycastTarget = false;
+        DragImage.sprite = GetComponent<Image>().sprite;
     }
 
     public void UseItem() {
