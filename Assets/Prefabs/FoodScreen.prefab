@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8056393236671377973}
   m_Layer: 5
-  m_Name: FoodScreen 1
+  m_Name: FoodScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,6 +397,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8056393236671377973}
     m_Modifications:
+    - target: {fileID: 389993339, guid: cf5cecb44e0ea1a4e853b389c87c331d, type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     - target: {fileID: 8615709002272144405, guid: cf5cecb44e0ea1a4e853b389c87c331d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -718,6 +723,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salad
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790075905873979
@@ -843,6 +854,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790075947946716
@@ -968,6 +985,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grape
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790075990889724
@@ -1093,6 +1116,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brigadeiro
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790076014770876
@@ -1218,6 +1247,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chips
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790076363550124
@@ -1343,6 +1378,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lollipop
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790076665618319
@@ -1468,6 +1509,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790077008053509
@@ -1593,6 +1640,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790077249897192
@@ -1718,6 +1771,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cookie
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790077371352867
@@ -1843,6 +1902,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790077442086377
@@ -1968,6 +2033,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soda
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
 --- !u!1001 &5271790077445931422
@@ -2087,5 +2158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
+    - target: {fileID: 2155139964992749271, guid: 758de19bba2105b36888e7f0bc887b78,
+        type: 3}
+      propertyPath: BarValues
+      value: 
+      objectReference: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 758de19bba2105b36888e7f0bc887b78, type: 3}
