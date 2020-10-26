@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e25ae7dcc1cc44686394542173e6d3, type: 3}
   m_Name: FoodBarValues
   m_EditorClassIdentifier: 
-  FillPercentage: 0
-  DecayCooldown: 0
-  DecayQuantity: 0
+  FillPercentage: 0.9999999
+  DecayCooldown: 2
+  DecayQuantity: 0.1

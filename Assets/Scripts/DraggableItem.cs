@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Inventory Inventory;
     public BarValues BarValues;
-    private float fillQuantity = 0.2f;
+    [Range(0, 1)] [SerializeField] private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText = null;
     [SerializeField] private Image DragImage = null;
 

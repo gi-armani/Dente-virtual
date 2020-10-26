@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryList:
   - itemName: Grape
-    amount: 0
+    amount: 54
   - itemName: Strawberry
-    amount: 6
+    amount: 76
   - itemName: Tutti-frutti
-    amount: 29
+    amount: 25
