@@ -3,32 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainBar : MonoBehaviour
+public class MainBar : Bar
 {
     public BarValues[] BarValuesArray;
-    GameObject fillBar;
 
-    void Awake()
-    {
-        fillBar = GameObject.FindWithTag("FillBar");
-    }
-
-    public void UpdateFill()
-    {
-        if (BarValuesArray.Length <= 0) return;
-
-        Image img = fillBar.GetComponent<Image>();
-        float sum = 0;
-
-        foreach (BarValues barValues in BarValuesArray)
-        {
-            sum += barValues.FillPercentage;
-        }
-
-        img.fillAmount = sum / BarValuesArray.Length;
-    }
-
-    private void OnEnable()
+    public override void OnEnable()
     {
         UpdateFill();
         foreach (BarValues barValues in BarValuesArray)
@@ -37,11 +16,25 @@ public class MainBar : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public override void OnDisable()
     {
         foreach (BarValues barValues in BarValuesArray)
         {
             barValues.OnFillChange -= UpdateFill;
         }
+    }
+
+    public override float CalculateFillAmount()
+    {
+        if (BarValuesArray.Length <= 0) return 0;
+
+        float sum = 0;
+
+        foreach (BarValues barValues in BarValuesArray)
+        {
+            sum += barValues.FillPercentage;
+        }
+
+        return sum / BarValuesArray.Length;
     }
 }

@@ -1063,6 +1063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac583a794ec0407439fabce994b29f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YellowUpperLimit: 0.65
+  RedUpperLimit: 0.3
+  GreenColor: {r: 0, g: 1, b: 0, a: 1}
+  YellowColor: {r: 1, g: 1, b: 0, a: 1}
+  RedColor: {r: 1, g: 0, b: 0, a: 1}
   BarValuesArray:
   - {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
   - {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483, type: 2}
