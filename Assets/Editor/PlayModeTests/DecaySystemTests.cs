@@ -29,10 +29,13 @@ namespace Tests
 
             // Assert
             Assert.AreEqual(1f - barValue.DecayQuantity, barValue.FillPercentage, .00001f, $"Bar value fill is at: {barValue.FillPercentage}");
-
+            LogAssert.Expect(LogType.Log, "Decaying");
+            
             // Clean
             GameObject.DestroyImmediate(DecaySystemObject);
             ScriptableObject.DestroyImmediate(barValue);
+
+            Assert.Pass();
         }
 
         [UnityTest]

@@ -15,6 +15,7 @@ public class DecaySystem : MonoBehaviour
         yield return new WaitForSeconds(BarValue.DecayCooldown);
         BarValue.AddFillPercentage(-BarValue.DecayQuantity);
         StartCoroutine(nameof(Decay), BarValue);
+        Debug.Log("Decaying");
     }
 
     private void BarSelect()
