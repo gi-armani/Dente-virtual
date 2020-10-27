@@ -25,10 +25,13 @@ namespace Tests
 
             // Act --> Acts on Start
             yield return new WaitForEndOfFrame();
+            Debug.Log("Waited for frame");
             yield return new WaitForSeconds(barValue.DecayCooldown);
 
             // Assert
+            Debug.Log("Getting to assertions");
             Assert.AreEqual(1f - barValue.DecayQuantity, barValue.FillPercentage, .00001f, $"Bar value fill is at: {barValue.FillPercentage}");
+            Debug.Log("Asserting log messaeg");
             LogAssert.Expect(LogType.Log, "Decaying");
 
             // Clean
