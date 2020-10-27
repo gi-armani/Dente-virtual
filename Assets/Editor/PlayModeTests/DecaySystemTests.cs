@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
-    public class DecayaSystemTests
+    public class DecaySystemTests
     {
 
         [UnityTest]
@@ -28,7 +28,7 @@ namespace Tests
             yield return new WaitForSeconds(barValue.DecayCooldown);
 
             // Assert
-            Assert.AreEqual(1f - barValue.DecayQuantity, barValue.FillPercentage);
+            Assert.AreEqual(1f - barValue.DecayQuantity, barValue.FillPercentage, .00001f, $"Bar value fill is at: {barValue.FillPercentage}");
 
             // Clean
             GameObject.DestroyImmediate(DecaySystemObject);
