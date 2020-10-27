@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Inventory Inventory;
     public BarValues BarValues;
-    [Range(0, 1)] [SerializeField] private float fillQuantity = 0.2f;
+    //[Range(0, 1)] [SerializeField] private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText = null;
     [SerializeField] private Image DragImage = null;
 
@@ -34,7 +34,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             Inventory.AddValue(gameObject.name, -1);
             QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
-            BarValues.AddFillPercentage(fillQuantity);
+            BarValues.AddFillPercentage(Inventory.GetItem(gameObject.name).healAmount);
         }
     }
 
