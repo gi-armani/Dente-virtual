@@ -34,5 +34,12 @@ namespace Tests
             GameObject.DestroyImmediate(DecaySystemObject);
             ScriptableObject.DestroyImmediate(barValue);
         }
+
+        [UnityTest]
+        public IEnumerator should_pass_test()
+        {
+            Assert.Pass();
+            yield return null;
+        }
     }
 }
