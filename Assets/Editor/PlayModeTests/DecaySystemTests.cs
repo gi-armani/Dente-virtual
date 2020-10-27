@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
 namespace Tests
@@ -24,7 +25,8 @@ namespace Tests
             system.BarValuesArray = new BarValues[1] { barValue };
 
             // Act --> Acts on Start
-            yield return new WaitForEndOfFrame();
+            //yield return new WaitForEndOfFrame();
+            yield return null;
             Debug.Log("Waited for frame");
             yield return new WaitForSeconds(barValue.DecayCooldown);
             Debug.Log("Waited for decay cooldown " + barValue.DecayCooldown);
@@ -41,6 +43,7 @@ namespace Tests
             ScriptableObject.DestroyImmediate(barValue);
             Debug.Log("Done cleaning scene");
             Assert.Pass();
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
         [UnityTest]
@@ -48,6 +51,17 @@ namespace Tests
         {
             Assert.Pass();
             yield return null;
+        }
+
+        [UnityTest] [Timeout(2000)]
+        public IEnumerator gameobject_creation_test()
+        {
+            var go = new GameObject();
+            yield return new WaitForEndOfFrame();
+            GameObject.Destroy(go);
+            yield return null;
+            Assert.AreEqual(0, 0);
+            Assert.Pass();
         }
     }
 }
