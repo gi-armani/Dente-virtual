@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, test-unity-test-runner ]
   pull_request:
     branches: [ main, develop ]
 

@@ -9,7 +9,7 @@ namespace Tests
     public class DecaySystemTests
     {
 
-        [UnityTest]
+        [UnityTest] [Timeout(2000)]
         public IEnumerator decay_system_decrease_fill_quantity_over_time()
         {
             // Prepare Scene
@@ -30,11 +30,12 @@ namespace Tests
             // Assert
             Assert.AreEqual(1f - barValue.DecayQuantity, barValue.FillPercentage, .00001f, $"Bar value fill is at: {barValue.FillPercentage}");
             LogAssert.Expect(LogType.Log, "Decaying");
-            
+
             // Clean
+            Debug.Log("Cleaning scene");
             GameObject.DestroyImmediate(DecaySystemObject);
             ScriptableObject.DestroyImmediate(barValue);
-
+            Debug.Log("Done cleaning scene");
             Assert.Pass();
         }
 
