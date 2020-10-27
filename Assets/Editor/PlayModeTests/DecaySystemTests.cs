@@ -26,8 +26,9 @@ namespace Tests
 
             // Act --> Acts on Start
             //yield return new WaitForEndOfFrame();
-            yield return null;
-            Debug.Log("Waited for frame");
+            Debug.Log("Waiting for frame");
+            yield return new WaitForEndOfFrame();
+            Debug.Log("Frame done");
             yield return new WaitForSeconds(barValue.DecayCooldown);
             Debug.Log("Waited for decay cooldown " + barValue.DecayCooldown);
 
@@ -57,11 +58,21 @@ namespace Tests
         public IEnumerator gameobject_creation_test()
         {
             var go = new GameObject();
-            yield return new WaitForEndOfFrame();
-            GameObject.Destroy(go);
             yield return null;
+            GameObject.Destroy(go);
             Assert.AreEqual(0, 0);
             Assert.Pass();
+        }
+
+        [UnityTest]
+        public IEnumerator gameobject_creation_test_with_unload()
+        {
+            var go = new GameObject();
+            yield return null;
+            GameObject.Destroy(go);
+            Assert.AreEqual(0, 0);
+            Assert.Pass();
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
