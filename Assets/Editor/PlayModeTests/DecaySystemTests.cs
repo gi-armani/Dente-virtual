@@ -27,6 +27,7 @@ namespace Tests
             yield return new WaitForEndOfFrame();
             Debug.Log("Waited for frame");
             yield return new WaitForSeconds(barValue.DecayCooldown);
+            Debug.Log("Waited for decay cooldown " + barValue.DecayCooldown);
 
             // Assert
             Debug.Log("Getting to assertions");
