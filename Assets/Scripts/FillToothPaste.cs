@@ -19,7 +19,11 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         initialScale = toothPasteBall.localScale;
     }
 
-    private void OnEnable() => toothPasteBall.localScale = initialScale;
+    private void OnEnable()
+    {
+        _pointerDown = false;
+        toothPasteBall.localScale = initialScale;
+    } 
 
     void Update()
     {

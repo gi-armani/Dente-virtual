@@ -751,7 +751,7 @@ MonoBehaviour:
   toothPasteBall: {fileID: 1710820123}
   scaleAmountPerTime: 0.5
   desiredScale: 0.5
-  maxScale: Infinity
+  maxScale: 1
 --- !u!114 &577368313
 MonoBehaviour:
   m_ObjectHideFlags: 0
