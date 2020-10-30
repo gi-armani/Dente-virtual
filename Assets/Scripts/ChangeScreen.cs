@@ -14,6 +14,7 @@ public class ChangeScreen : MonoBehaviour
 
     public void Change()
     {
+        if (screenToOpen == null) return;
         transform.parent.gameObject.SetActive(false);
 
         screenToOpen.SetActive(true);
