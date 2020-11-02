@@ -10,16 +10,23 @@ public class HealthBar : Bar
     public override void OnEnable()
     {
         UpdateFill();
-        BarValues.OnFillChange += UpdateFill;
+        if (BarValues != null) {
+            BarValues.OnFillChange += UpdateFill;
+        }
     }
 
     public override void OnDisable()
     {
-        BarValues.OnFillChange -= UpdateFill;
+        if (BarValues != null) {
+            BarValues.OnFillChange -= UpdateFill;
+        }
     }
 
     public override float CalculateFillAmount()
     {
-        return BarValues.FillPercentage;
+        if (BarValues != null) {
+            return BarValues.FillPercentage;
+        }
+        return 1f;
     }
 }
