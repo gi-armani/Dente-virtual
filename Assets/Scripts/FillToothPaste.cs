@@ -23,11 +23,11 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         _pointerDown = false;
         toothPasteBall.localScale = initialScale;
-    } 
+    }
 
     void Update()
     {
-        if(_pointerDown)
+        if (_pointerDown && toothPasteBall.localScale.magnitude < maxScale)
         {
             toothPasteBall.localScale *= 1f + (scaleAmountPerTime * Time.deltaTime);
         }
