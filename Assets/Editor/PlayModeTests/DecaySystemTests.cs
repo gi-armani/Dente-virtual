@@ -36,7 +36,7 @@ namespace Tests
             ScriptableObject.DestroyImmediate(barValue);
         }
 
-        private static float[] times = { 1.5f, 3f, 5.75f, 1.3f, 1.8f };
+        private static float[] times = { 1.5f, 3f, 5.75f, 1.3f, 1.8f, 3.1f, 2f, 1f };
         [UnityTest]
         public IEnumerator is_decaying_multiple_times([ValueSource("times")] float time)
         {
@@ -53,9 +53,9 @@ namespace Tests
             system.BarValuesArray = new BarValues[1] { barValue };
             
             // Act --> Acts on Start
-            yield return null;
-            yield return new WaitForSeconds(barValue.DecayCooldown * time);
-            yield return null;
+            yield return null; // -> Enfileira os enumerator -> que vao 1s -> 1x, 1s -> 2x, 1s -> 3x, 1s
+            yield return new WaitForSeconds((barValue.DecayCooldown * time) + (0.01f * barValue.DecayCooldown)); // -> enfileira um enumerator 3s
+            Debug.Log("decay in test");
             //Assert
             var amountDecayed = barValue.DecayQuantity * Mathf.Floor(time);
             Assert.AreEqual(initialFillPercentage - amountDecayed, barValue.FillPercentage, 0.001f);
