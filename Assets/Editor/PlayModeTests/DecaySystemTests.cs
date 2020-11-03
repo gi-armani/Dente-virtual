@@ -55,7 +55,7 @@ namespace Tests
             // Act --> Acts on Start
             yield return null;
             yield return new WaitForSeconds(barValue.DecayCooldown * time);
-            
+            yield return null;
             //Assert
             var amountDecayed = barValue.DecayQuantity * Mathf.Floor(time);
             Assert.AreEqual(initialFillPercentage - amountDecayed, barValue.FillPercentage, 0.001f);
