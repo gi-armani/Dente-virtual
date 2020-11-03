@@ -53,9 +53,9 @@ namespace Tests
             system.BarValuesArray = new BarValues[1] { barValue };
             
             // Act --> Acts on Start
-            yield return null; // -> Enfileira os enumerator -> que vao 1s -> 1x, 1s -> 2x, 1s -> 3x, 1s
-            yield return new WaitForSeconds((barValue.DecayCooldown * time) + (0.01f * barValue.DecayCooldown)); // -> enfileira um enumerator 3s
-            Debug.Log("decay in test");
+            yield return null; 
+            yield return new WaitForSeconds((barValue.DecayCooldown * time) + (0.01f * barValue.DecayCooldown));
+
             //Assert
             var amountDecayed = barValue.DecayQuantity * Mathf.Floor(time);
             Assert.AreEqual(initialFillPercentage - amountDecayed, barValue.FillPercentage, 0.001f);

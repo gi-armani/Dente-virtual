@@ -13,7 +13,6 @@ public class DecaySystem : MonoBehaviour
     private IEnumerator Decay(BarValues BarValue)
     {
         yield return new WaitForSeconds(BarValue.DecayCooldown);
-        Debug.Log("decay in script");
         BarValue.AddFillPercentage(-BarValue.DecayQuantity);
         StartCoroutine(nameof(Decay), BarValue);
     }
