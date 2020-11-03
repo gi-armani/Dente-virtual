@@ -1,18 +1,12 @@
 {
-    "name": "PlayModeTests",
+    "name": "EditMode",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Scripts"
     ],
     "includePlatforms": [
-        "Editor",
-        "iOS",
-        "LinuxStandalone64",
-        "macOSStandalone",
-        "WSA",
-        "WindowsStandalone32",
-        "WindowsStandalone64"
+        "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

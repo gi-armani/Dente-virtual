@@ -1,12 +1,20 @@
 {
-    "name": "Tests",
+    "name": "PlayMode",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Scripts"
     ],
     "includePlatforms": [
-        "Editor"
+        "CloudRendering",
+        "Editor",
+        "iOS",
+        "LinuxStandalone64",
+        "macOSStandalone",
+        "WSA",
+        "WebGL",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
