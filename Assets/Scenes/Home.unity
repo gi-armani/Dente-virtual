@@ -916,8 +916,9 @@ GameObject:
   - component: {fileID: 663567432}
   - component: {fileID: 663567434}
   - component: {fileID: 663567433}
+  - component: {fileID: 663567435}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Thermometer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -979,6 +980,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663567431}
   m_CullTransparentMesh: 0
+--- !u!114 &663567435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663567431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8a117e10b37e49b52d8fa9982dc7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barValue: {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
 --- !u!1 &678385192
 GameObject:
   m_ObjectHideFlags: 0
