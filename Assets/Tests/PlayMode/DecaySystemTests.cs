@@ -88,7 +88,7 @@ namespace Tests
             // Act --> Acts on Start
             var maxCooldown = .1f * barValues.Length;
             yield return null;
-            yield return new WaitForSeconds(maxCooldown);
+            yield return new WaitForSeconds(maxCooldown + (0.01f * barValues[0].DecayCooldown));
             
             for (int i = 0; i < barValues.Length; i++)
             {
