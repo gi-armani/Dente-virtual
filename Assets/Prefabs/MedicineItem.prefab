@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 2155139964992749096}
   - component: {fileID: 2155139964992749270}
   - component: {fileID: 2155139964992749097}
-  - component: {fileID: 2155139964992749271}
+  - component: {fileID: 1897494116524038826}
   m_Layer: 5
   m_Name: MedicineItem
   m_TagString: Untagged
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2155139964992749271
+--- !u!114 &1897494116524038826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2155139964992749099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59274742c6f7ab24190442e1a8292a05, type: 3}
+  m_Script: {fileID: 11500000, guid: 1409e730b989852478c5ddc29c4b204e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 11400000, guid: cd46e6b507bb4af43b9a6620e232005a, type: 2}

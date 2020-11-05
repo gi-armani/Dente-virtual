@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,7 +9,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Inventory Inventory;
     public BarValues BarValues;
-    //[Range(0, 1)] [SerializeField] private float fillQuantity = 0.2f;
     [SerializeField] private TextMeshProUGUI QuantityText = null;
     [SerializeField] private Image DragImage = null;
 
@@ -63,5 +62,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         DragImage.gameObject.SetActive(false);
     }
 
-    public void OnDrop() => UseItem();
+    public virtual void OnDrop()
+    {
+        UseItem();
+    }
 }

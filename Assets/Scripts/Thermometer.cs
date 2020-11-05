@@ -11,15 +11,19 @@ public class Thermometer : MonoBehaviour
     Color opaque = new Color(1, 1, 1, 1);
     Color transparent = new Color(1, 1, 1, 0);
 
+    public bool isSick = false;
+
     void Update()
     {
         if (barValue.FillPercentage < lowerLimit)
         {
             GetComponent<Image>().color = opaque;
+            isSick = true;
         }
         else
         {
             GetComponent<Image>().color = transparent;
+            isSick = false;
         }
     }
 }

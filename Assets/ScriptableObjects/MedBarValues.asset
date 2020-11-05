@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e25ae7dcc1cc44686394542173e6d3, type: 3}
   m_Name: MedBarValues
   m_EditorClassIdentifier: 
-  FillPercentage: 1
-  DecayCooldown: 5
+  FillPercentage: 0.4
+  DecayCooldown: 3
   DecayQuantity: 0.1

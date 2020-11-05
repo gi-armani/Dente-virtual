@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryList:
   - itemName: Grape
-    amount: 54
-    healAmount: 0.2
+    amount: 50
+    healAmount: 0.5
   - itemName: Strawberry
-    amount: 76
-    healAmount: 0.2
+    amount: 50
+    healAmount: 0.5
   - itemName: Tutti-frutti
-    amount: 25
-    healAmount: 0.2
+    amount: 50
+    healAmount: 0.5
