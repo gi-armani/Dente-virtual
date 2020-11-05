@@ -19,6 +19,13 @@ public class ExpressionControl : MonoBehaviour
     public float SadUpperLimit = 0.40f;
     public float VerySadUpperLimit = 0.20f;
 
+    Image dentinhoImage;
+
+    private void Start()
+    {
+        dentinhoImage = GetComponent<Image>();
+    }
+
     public void Update()
     {
         ChangeDentinho();
@@ -30,24 +37,23 @@ public class ExpressionControl : MonoBehaviour
 
         if (MainBarFill < VerySadUpperLimit)
         {
-            this.GetComponent<Image>().sprite = VerySadSprite;
+            dentinhoImage.sprite = VerySadSprite;
         }
         else if (MainBarFill < SadUpperLimit)
         {
-            this.GetComponent<Image>().sprite = SadSprite;
+            dentinhoImage.sprite = SadSprite;
         }
         else if (MainBarFill < NeutralUpperLimit)
         {
-            this.GetComponent<Image>().sprite = NeutralSprite;
+            dentinhoImage.sprite = NeutralSprite;
         }
         else if (MainBarFill < HappyUpperLimit)
         {
-            this.GetComponent<Image>().sprite = HappySprite;
+            dentinhoImage.sprite = HappySprite;
         }
         else
         {
-            this.GetComponent<Image>().sprite = VeryHappySprite;
+            dentinhoImage.sprite = VeryHappySprite;
         }
     }
-
 }
