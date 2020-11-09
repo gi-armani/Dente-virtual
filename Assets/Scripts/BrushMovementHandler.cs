@@ -7,21 +7,16 @@ public class BrushMovementHandler : MonoBehaviour
 {
     static GameObject lastActive;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public static void DisplayImage(GameObject image)
     {
         lastActive?.SetActive(false);
         image?.SetActive(true);
 
         lastActive = image;
+    }
+
+    public void OnDisable()
+    {
+        lastActive?.SetActive(false);
     }
 }
