@@ -38,4 +38,5 @@ public class Item
     public int amount;
     [Range(0, 1)]
     public float healAmount = 0.2f;
+    public bool IsHealthy;
 }

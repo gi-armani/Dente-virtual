@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 2155139964992749096}
   - component: {fileID: 2155139964992749270}
   - component: {fileID: 2155139964992749097}
-  - component: {fileID: 2155139964992749271}
+  - component: {fileID: 2369904042804795210}
   m_Layer: 5
   m_Name: FoodItem
   m_TagString: Untagged
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2155139964992749271
+--- !u!114 &2369904042804795210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2155139964992749099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59274742c6f7ab24190442e1a8292a05, type: 3}
+  m_Script: {fileID: 11500000, guid: 86561559f3b3041b6bdcdfece9214a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 11400000, guid: 1279ae022564ed142a84a1624d2128f3, type: 2}
