@@ -9,9 +9,16 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private Vector3 _initialPosition = Vector3.zero;
 
+    public GameObject movingBrush;
+
     private void Start()
     {
         _initialPosition = toothBrush.transform.position;
+    }
+
+    public void ShowImage()
+    {
+        movingBrush.SetActive(true);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -33,4 +40,6 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         toothBrush.enabled = false;
         toothBrush.transform.position = transform.position;
     }
+
+    
 }
