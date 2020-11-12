@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: 244df557231ffc04e922222d74c1d05e
+guid: 733dffddcca7e744583614b69cbacff9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8517896944837758819
-    second: A6_0
-  - first:
-      213: 4146412385868213776
-    second: A6_1
-  - first:
-      213: 6992485259327661589
-    second: A6_2
-  - first:
-      213: 3519491116011125173
-    second: A6_3
-  - first:
-      213: 7879410961137825120
-    second: A6_4
-  - first:
-      213: -6394941969419358164
-    second: A6_5
-  - first:
-      213: 2639170321436156556
-    second: A6_6
-  - first:
-      213: -4107382316871837238
-    second: A6_7
-  - first:
-      213: 4265010023682365799
-    second: A6_8
+      213: -8556930584969022907
+    second: sujeira_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: A6_0
+      name: sujeira_0
       rect:
         serializedVersion: 2
-        x: 342
-        y: 336
-        width: 338
-        height: 274
+        x: 0
+        y: 10
+        width: 339
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f807e3426a53670800000000000000
-      internalID: 8517896944837758819
+      spriteID: 542fe3338fcaf3980800000000000000
+      internalID: -8556930584969022907
       vertices: []
       indices: 
       edges: []

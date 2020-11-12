@@ -29,18 +29,19 @@ public class Cavity : MonoBehaviour
     {
         float percentage = BarValue.FillPercentage;
         cavityImage.color = opaque;
-        if(percentage < LowerLimit)
+        if (percentage < LowerLimit)
         {
             cavityImage.sprite = HardCavity;
         }
-        else if(percentage < MediumLimit)
+        else if (percentage < MediumLimit)
         {
             cavityImage.sprite = MediumCavity;
         }
-        else if(percentage < UpperLimit)
-        {   
+        else if (percentage < UpperLimit)
+        {
             cavityImage.sprite = LightCavity;
-        }else
+        }
+        else
         {
             cavityImage.color = transparent;
         }
