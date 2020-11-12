@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
+  fillToothPaste: {fileID: 0}
   movingBrush: {fileID: 965953722}
 --- !u!1 &868284789
 GameObject:
@@ -1424,6 +1425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
+  fillToothPaste: {fileID: 1392107892}
   movingBrush: {fileID: 965953722}
 --- !u!1001 &1128775618
 PrefabInstance:
@@ -1755,6 +1757,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6951200106820087030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1392107892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6951200107392064526, guid: 4be4b951204a56c4280714ab4a8f044d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6951200106820087030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392107890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790b22366ca85e55ebc506862a296ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1392107895
 Animator:
   serializedVersion: 3
@@ -2650,6 +2664,21 @@ PrefabInstance:
       propertyPath: screenToOpen
       value: 
       objectReference: {fileID: 6699555706320854376}
+    - target: {fileID: 2837516772097882861, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837516772097882861, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837516772097882861, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3307782547553179355, guid: 4be4b951204a56c4280714ab4a8f044d,
         type: 3}
       propertyPath: displayImage
@@ -2759,6 +2788,36 @@ PrefabInstance:
         type: 3}
       propertyPath: OnToothPasteDone.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108195168152, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6951200108234779640, guid: 4be4b951204a56c4280714ab4a8f044d,
         type: 3}

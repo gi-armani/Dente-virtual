@@ -33,6 +33,11 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
     }
 
+    public Vector3 GetToothPasteScale()
+    {
+        return toothPasteBall.localScale;
+    }
+
     public void OnPointerDown(PointerEventData pointerEventData)
     {
         _pointerDown = true;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Camera mainCamera = null;
-    //[SerializeField] private Image toothBrush = null;
+    [SerializeField] private FillToothPaste fillToothPaste = null;
 
     private Vector3 _initialPosition = Vector3.zero;
 
@@ -16,14 +16,23 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         _initialPosition = movingBrush.transform.position;
     }
 
+    private void OnEnable()
+    {
+        Vector3 toothPasteScale = fillToothPaste.GetToothPasteScale();
+        Transform toothPasteBall = movingBrush.transform.Find("ToothPasteBall");
+        toothPasteBall.localScale = toothPasteScale;
+    }
+
     public void ShowImage()
     {
         movingBrush.SetActive(true);
+        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin Drag");
+        //Debug.Log("Begin Drag");
+        Debug.Log(fillToothPaste);
     }
 
     public void OnDrag(PointerEventData eventData)
