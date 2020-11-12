@@ -790,7 +790,7 @@ MonoBehaviour:
     type: 3}
   angrySprite: {fileID: 6413734476913471024, guid: a0bbcbb0762fc7c4b9b785196efdcbbf,
     type: 3}
-  balloonTimer: 1.5
+  balloonTimer: 1
   isShowingBalloon: 0
 --- !u!114 &528149783
 MonoBehaviour:
@@ -1712,6 +1712,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 222982839}
     m_Modifications:
+    - target: {fileID: 625123280, guid: 3cdb331fdbee9584280637fa5acf3777, type: 3}
+      propertyPath: balloonTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 663567435, guid: 3cdb331fdbee9584280637fa5acf3777, type: 3}
       propertyPath: lowerLimit
       value: 0.6
@@ -1911,6 +1915,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 222982839}
     m_Modifications:
+    - target: {fileID: 965953722, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 965953723, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 112.28186
+      objectReference: {fileID: 0}
+    - target: {fileID: 965953723, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.8724265
+      objectReference: {fileID: 0}
+    - target: {fileID: 965953723, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420.00012
+      objectReference: {fileID: 0}
+    - target: {fileID: 965953723, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.49999982
+      objectReference: {fileID: 0}
     - target: {fileID: 965953726, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
       propertyPath: mainCamera
       value: 
@@ -1924,6 +1948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShowerScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951200108234779640, guid: 4be4b951204a56c4280714ab4a8f044d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6951200108234779641, guid: 4be4b951204a56c4280714ab4a8f044d,
         type: 3}
