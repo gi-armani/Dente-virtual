@@ -1257,8 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685716e30c204bb4ca33453c6e01dfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  toothBrush: {fileID: 0}
+  mainCamera: {fileID: 519420031}
   movingBrush: {fileID: 965953722}
 --- !u!1 &868284789
 GameObject:
@@ -1425,8 +1424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  toothBrush: {fileID: 965953724}
-  movingBrush: {fileID: 0}
+  movingBrush: {fileID: 965953722}
 --- !u!1001 &1128775618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1776,18 +1774,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1392107896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392107890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439a9b76dcf6038498a2f3376b2d49d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1414956814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6951200108234779640, guid: 4be4b951204a56c4280714ab4a8f044d,
