@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class MovementTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject firstTrigger;
     [SerializeField] private GameObject nextTrigger;
+    public static Action FinishedMovement;
 
     void OnEnable()
     {
@@ -21,8 +23,9 @@ public class MovementTrigger : MonoBehaviour
     {
         if (nextTrigger == null)
         {
-            // termina o movimento
-            Debug.Log("TERMINOU");
+            FinishedMovement?.Invoke();
+            ResetTriggers();
+            transform.parent.gameObject.SetActive(false);
         }
         else
         {
