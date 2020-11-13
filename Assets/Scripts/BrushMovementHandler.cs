@@ -8,13 +8,15 @@ public class BrushMovementHandler : MonoBehaviour
     [SerializeField] private BarValues showerBar;
     [SerializeField] private float healQuantity = 0.25f;
     static GameObject lastActive;
+    static GameObject lastCheck;
 
-    public static void DisplayImage(GameObject image)
+    public static void DisplayImage(GameObject movementImage, GameObject checkImage)
     {
         lastActive?.SetActive(false);
-        image?.SetActive(true);
+        movementImage?.SetActive(true);
 
-        lastActive = image;
+        lastActive = movementImage;
+        lastCheck = checkImage;
     }
 
     public void OnEnable()
@@ -30,7 +32,9 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void CleanTooth()
     {
+        lastCheck?.SetActive(true);
         showerBar.AddFillPercentage(healQuantity);
+        
     }
 
 }
