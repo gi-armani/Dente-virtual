@@ -19,4 +19,9 @@ public class BarValues : ScriptableObject
 
         OnFillChange?.Invoke();
     }
+
+    public float getFillPercentage()
+    {
+        return this.FillPercentage;
+    }
 }

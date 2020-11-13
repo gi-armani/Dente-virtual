@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BrushMovementHandler : MonoBehaviour
 {
     [SerializeField] private BarValues showerBar;
-    [SerializeField] private float healQuantity = 0.25f;
+    private float healQuantity;
     static GameObject lastActiveMovement;
     static GameObject lastCheck;
     static GameObject lastUsedIcon;
@@ -24,6 +24,7 @@ public class BrushMovementHandler : MonoBehaviour
     public void OnEnable()
     {
         MovementTrigger.FinishedMovement += CleanTooth;
+        healQuantity = (1 - showerBar.getFillPercentage()) / 4;
     }
 
     public void OnDisable()
