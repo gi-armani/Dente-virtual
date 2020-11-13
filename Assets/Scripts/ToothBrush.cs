@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -9,6 +10,7 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     [SerializeField] private FillToothPaste fillToothPaste = null;
 
     private Vector3 _initialPosition = Vector3.zero;
+    public static Action ReleasedToothBrush;
 
     private void Start()
     {
@@ -24,7 +26,7 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void ShowImage()
     {
-        movingBrush.SetActive(true);       
+        movingBrush.SetActive(true);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -34,13 +36,15 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 position = mainCamera.ScreenToWorldPoint(eventData.position);
-        position.z = mainCamera.transform.position.z + 1;
+        // position.z = mainCamera.transform.position.z + 1;
+        position.z = 5;
         movingBrush.transform.position = position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         movingBrush.transform.position = _initialPosition;
+        ReleasedToothBrush?.Invoke();
     }
 
     public void OnDisable()
