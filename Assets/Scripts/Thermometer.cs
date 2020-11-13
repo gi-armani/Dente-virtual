@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Thermometer : MonoBehaviour
 {
-    [SerializeField] private BarValues barValue;
+    [SerializeField] private BarValues barValue = default;
     [SerializeField] private float lowerLimit = 0.4f;
 
     Color opaque = new Color(1, 1, 1, 1);

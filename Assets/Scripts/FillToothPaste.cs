@@ -10,7 +10,7 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     [SerializeField] private Transform toothPasteBall = null;
     [SerializeField] private float scaleAmountPerTime = 0.01f;
-    [SerializeField] private float desiredScale = 0.5f;
+    // [SerializeField] private float desiredScale = 0.5f;
     [SerializeField] private float maxScale = 1f;
     private bool _pointerDown = false;
     private Vector3 initialScale = Vector3.zero;

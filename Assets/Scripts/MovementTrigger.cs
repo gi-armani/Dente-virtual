@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MovementTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject firstTrigger;
-    [SerializeField] private GameObject nextTrigger;
+    [SerializeField] private GameObject firstTrigger = default;
+    [SerializeField] private GameObject nextTrigger = default;
     public static Action FinishedMovement;
 
     void OnEnable()

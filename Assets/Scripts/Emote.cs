@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Emote : MonoBehaviour
 {
-    [SerializeField] private Sprite happySprite;
-    [SerializeField] private Sprite angrySprite;
+    [SerializeField] private Sprite happySprite = default;
+    [SerializeField] private Sprite angrySprite = default;
     [SerializeField] private float balloonTimer = 1.5f;
 
     Color opaque = new Color(1, 1, 1, 1);

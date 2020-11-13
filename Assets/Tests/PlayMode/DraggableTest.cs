@@ -12,7 +12,9 @@ namespace Tests
     public class DraggableTest
     {
         // Funções pra lidar com o load da cena de teste
-        bool sceneLoaded;
+
+        // private bool sceneLoaded = default;
+
         public void LoadTestScene()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
@@ -21,7 +23,7 @@ namespace Tests
 
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            sceneLoaded = true;
+            // sceneLoaded = true;
         }
     }
 }

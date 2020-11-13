@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BrushMovementHandler : MonoBehaviour
 {
-    [SerializeField] private BarValues showerBar;
+    [SerializeField] private BarValues showerBar = default;
     private float healQuantity;
     static GameObject lastActiveMovement;
     static GameObject lastCheck;
@@ -38,7 +38,7 @@ public class BrushMovementHandler : MonoBehaviour
         lastCheck?.SetActive(true);
         changeIconAlpha();
         showerBar.AddFillPercentage(healQuantity);
-        
+
     }
 
     private void changeIconAlpha()

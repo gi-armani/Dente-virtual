@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ShowerItem : MonoBehaviour
 {
-    [SerializeField] private GameObject displayImage;
-    [SerializeField] private GameObject checkImage;
+    [SerializeField] private GameObject displayImage = default;
+    [SerializeField] private GameObject checkImage = default;
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(ShowMove);
