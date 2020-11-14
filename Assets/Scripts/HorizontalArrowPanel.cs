@@ -9,12 +9,19 @@ public class HorizontalArrowPanel : MonoBehaviour
 
     private RectTransform[] children = null;
     private RectTransform scrollView = null;
+    private Button leftArrow = null;
+    private Button rightArrow = null;
 
     private void Awake()
     {
         scrollView = transform.Find("ScrollView").GetComponent<RectTransform>();
+        leftArrow = transform.Find("LeftArrow").GetComponent<Button>();
+        rightArrow = transform.Find("RightArrow").GetComponent<Button>();
+
+        leftArrow.onClick.AddListener(MoveViewToLeft);
+        rightArrow.onClick.AddListener(MoveViewToRight);
+
         PopulateChildrenArray();
-        
     }
 
     private void PopulateChildrenArray()
@@ -61,6 +68,21 @@ public class HorizontalArrowPanel : MonoBehaviour
         }
     }
 
+    private void MoveViewToLeft()
+    {
+        float positionX = scrollView.anchoredPosition.x + canvas.rect.width;
+        positionX = Mathf.Clamp(positionX, -scrollView.sizeDelta.x, 0f);
+        scrollView.anchoredPosition = new Vector2(positionX, scrollView.anchoredPosition.y);
+    }
+
+    private void MoveViewToRight()
+    {
+        
+        float positionX = scrollView.anchoredPosition.x - canvas.rect.width;
+        positionX = Mathf.Clamp(positionX, -scrollView.sizeDelta.x, 0f);
+        scrollView.anchoredPosition = new Vector2(positionX, scrollView.anchoredPosition.y);
+    }
+
     public void RecalculateHorizontalLayout()
     {
         SetScrollViewWidth();
@@ -70,7 +92,12 @@ public class HorizontalArrowPanel : MonoBehaviour
     [ContextMenu("Recalculate View Width")]
     private void EditorSetViewWidth()
     {
-        Awake();
+        scrollView = transform.Find("ScrollView").GetComponent<RectTransform>();
+        leftArrow = transform.Find("LeftArrow").GetComponent<Button>();
+        rightArrow = transform.Find("RightArrow").GetComponent<Button>();
+        
+        PopulateChildrenArray();
+        
         RecalculateHorizontalLayout();
     }
 }
