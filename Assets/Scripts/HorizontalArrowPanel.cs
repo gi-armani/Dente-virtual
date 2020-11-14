@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HorizontalArrowPanel : MonoBehaviour
 {
@@ -12,32 +13,64 @@ public class HorizontalArrowPanel : MonoBehaviour
     private void Awake()
     {
         scrollView = transform.Find("ScrollView").GetComponent<RectTransform>();
-        children = scrollView.GetComponentsInChildren<RectTransform>();
+        PopulateChildrenArray();
+        
+    }
+
+    private void PopulateChildrenArray()
+    {
+        children = new RectTransform[scrollView.childCount];
+        int i = 0;
+        foreach(Transform child in scrollView)
+        {
+            children[i] = child.GetComponent<RectTransform>();
+            i++;
+        }
     }
 
     private void Start()
     {
-        SetViewWidth();
+        RecalculateHorizontalLayout();
     }
     
-    [ContextMenu("Recalculate View Width")]
-    private void SetViewWidth()
+    private void SetScrollViewWidth()
     {
         if (scrollView.childCount == 0)
             return;
 
-        // Set scrollView Width
         int itemBlockNum = (Mathf.CeilToInt(scrollView.childCount / (float)visibleItemCount) - 1);
         float width = canvas.rect.width * itemBlockNum;
         scrollView.sizeDelta = new Vector2(width, scrollView.sizeDelta.y);
         
-        // Set Children width
-        float childWidth = (canvas.rect.width / visibleItemCount);
-        for(int i = 1; i < children.Length; i++)
-        {
-            children[i].sizeDelta = new Vector2(childWidth, children[i].sizeDelta.y);
-        }
+    }
 
-        // TODO: Set Child Spacing Here
+    private void SetChildrenWidthAndPosition()
+    {
+        if (scrollView.childCount == 0)
+            return;
+        
+        float childWidth = (canvas.rect.width / visibleItemCount);
+        float anchoredPositionX = childWidth / 2;
+        Debug.Log(childWidth + "child width");
+        for(int i = 0; i < children.Length; i++)
+        {
+            children[i].sizeDelta = new Vector2(childWidth, scrollView.rect.height);
+            children[i].anchoredPosition = new Vector2(anchoredPositionX, -scrollView.rect.height / 2);
+            Debug.Log($"child {i} {children[i].name} has anchored in x {anchoredPositionX}");
+            anchoredPositionX += childWidth;
+        }
+    }
+
+    public void RecalculateHorizontalLayout()
+    {
+        SetScrollViewWidth();
+        SetChildrenWidthAndPosition();
+    }
+
+    [ContextMenu("Recalculate View Width")]
+    private void EditorSetViewWidth()
+    {
+        Awake();
+        RecalculateHorizontalLayout();
     }
 }
