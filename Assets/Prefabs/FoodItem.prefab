@@ -300,3 +300,4 @@ MonoBehaviour:
   BarValues: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483, type: 2}
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}
+  resource: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}

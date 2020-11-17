@@ -9,6 +9,7 @@ using System;
 public class FoodItem : DraggableItem
 {
     Emote emote;
+    public Resources resource;
     private void Start()
     {
         emote = GameObject.Find("Emote").GetComponent<Emote>();
@@ -21,6 +22,7 @@ public class FoodItem : DraggableItem
             UseItem();
             if (item.IsHealthy)
             {
+                resource.AddValue(50);
                 StartCoroutine(emote.ShowBalloon(true));
             }
             else
