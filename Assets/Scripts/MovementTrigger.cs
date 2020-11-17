@@ -34,6 +34,7 @@ public class MovementTrigger : MonoBehaviour
         }
     }
 
+
     void ResetTriggers()
     {
         gameObject.SetActive(false);

@@ -10,6 +10,8 @@ public class BrushMovementHandler : MonoBehaviour
     static GameObject lastActiveMovement;
     static GameObject lastCheck;
     static GameObject lastUsedIcon;
+    public int counter = 0;
+    public Resources resources;
 
     public static void DisplayImage(GameObject movementImage, GameObject checkImage, GameObject iconImage)
     {
@@ -23,6 +25,7 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void OnEnable()
     {
+        counter = 0;
         MovementTrigger.FinishedMovement += CleanTooth;
         healQuantity = (1 - showerBar.getFillPercentage()) / 4;
     }
@@ -35,10 +38,17 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void CleanTooth()
     {
+        AddCounter();
+        resources.AddValue(100);
         lastCheck?.SetActive(true);
         changeIconAlpha();
         showerBar.AddFillPercentage(healQuantity);
 
+    }
+
+    public void AddCounter()
+    {
+        counter++;
     }
 
     private void changeIconAlpha()
