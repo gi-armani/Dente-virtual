@@ -23,7 +23,7 @@ namespace Tests
         {
             sceneLoaded = true;
         }
-        
+
         [UnityTest]
         public IEnumerator change_screen_with_screen_to_open_assigned()
         {
@@ -51,7 +51,7 @@ namespace Tests
             // Garante que a screen atual tá ativa e a screen pra abrir tá desativada
             currentScreen.SetActive(true);
             screenToOpen.SetActive(false);
-            
+
             // Define a test screen que a gente criou como sendo a screen pra ser aberta ao clicar no botão
             button.GetComponent<ChangeScreen>().screenToOpen = screenToOpen;
 
@@ -61,7 +61,7 @@ namespace Tests
             // Act
             // Clica no botão
             button.GetComponent<Button>().onClick.Invoke();
-            
+
             // Assert
             // Checa se a screen que a gente tava ficou desativada e se a nova screen ficou ativa
             Assert.IsFalse(currentScreen.activeSelf);
@@ -69,7 +69,8 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator change_screen_with_screen_to_open_unassigned() {
+        public IEnumerator change_screen_with_screen_to_open_unassigned()
+        {
             // Load
             LoadTestScene();
             yield return new WaitWhile(() => sceneLoaded == false);

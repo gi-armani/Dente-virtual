@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetBar : MonoBehaviour
+public class ResetBarDebug : MonoBehaviour
 {
     public BarValues[] BarValuesArray;
 
