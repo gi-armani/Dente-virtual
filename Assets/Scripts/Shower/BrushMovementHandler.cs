@@ -7,6 +7,7 @@ public class BrushMovementHandler : MonoBehaviour
 {
     [SerializeField] private BarValues showerBar = default;
     [SerializeField] private Resources resources = default;
+    [SerializeField] private int moneyReward = default;
     private float healQuantity;
     static GameObject lastActiveMovement;
     static GameObject lastCheck;
@@ -38,14 +39,17 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void CleanTooth()
     {
-        resources.AddMoney(50);
         lastCheck?.SetActive(true);
-        changeIconAlpha();
+        ChangeIconAlpha();
         showerBar.AddFillPercentage(healQuantity);
         movementsFinished++;
+        if (movementsFinished == 4)
+        {
+            resources.AddMoney(moneyReward);
+        }
     }
 
-    private void changeIconAlpha()
+    private void ChangeIconAlpha()
     {
         Image image = lastUsedIcon.GetComponent<Image>();
         var tempColor = image.color;

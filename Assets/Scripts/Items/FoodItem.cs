@@ -10,6 +10,7 @@ public class FoodItem : DraggableItem
 {
     Emote emote;
     [SerializeField] private Resources resources = default;
+    [SerializeField] private int moneyReward = default;
 
     private void Start()
     {
@@ -23,7 +24,8 @@ public class FoodItem : DraggableItem
             UseItem();
             if (item.IsHealthy)
             {
-                resources.AddMoney(50);
+
+                resources.AddMoney(moneyReward);
                 StartCoroutine(emote.ShowBalloon(true));
             }
             else

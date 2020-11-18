@@ -301,3 +301,4 @@ MonoBehaviour:
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}
   resources: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
+  moneyReward: 50
