@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class MemoryGame : MonoBehaviour
 {
-
     public GameObject dentinho;
     public GameObject[] Cards;
     private int rows;
@@ -33,7 +32,6 @@ public class MemoryGame : MonoBehaviour
 
         int xDist = 270;
         int yDist = 300;
-
 
         Randomizer.Randomize(Cards);
         for (int i = 0; i < cols; i++)
