@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,18 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class Resources : ScriptableObject
 {
-    public float Money;
+    public int Money;
+    public static Action MoneyChanged;
 
-    public void AddValue(int value)
-    {   
-        if(value > 0)
-            Money += value;
+    public void AddMoney(int value)
+    {
+        Money += value;
+        MoneyChanged?.Invoke();
+    }
 
+    public void SetMoney(int value)
+    {
+        Money = value;
+        MoneyChanged?.Invoke();
     }
 }

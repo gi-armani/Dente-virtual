@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class BrushMovementHandler : MonoBehaviour
 {
     [SerializeField] private BarValues showerBar = default;
+    [SerializeField] private Resources resources = default;
     private float healQuantity;
     static GameObject lastActiveMovement;
     static GameObject lastCheck;
     static GameObject lastUsedIcon;
-    public int counter = 0;
-    public Resources resources;
+    int movementsFinished = 0;
 
     public static void DisplayImage(GameObject movementImage, GameObject checkImage, GameObject iconImage)
     {
@@ -25,7 +25,7 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void OnEnable()
     {
-        counter = 0;
+        movementsFinished = 0;
         MovementTrigger.FinishedMovement += CleanTooth;
         healQuantity = (1 - showerBar.getFillPercentage()) / 4;
     }
@@ -38,17 +38,11 @@ public class BrushMovementHandler : MonoBehaviour
 
     public void CleanTooth()
     {
-        AddCounter();
-        resources.AddValue(100);
+        resources.AddMoney(50);
         lastCheck?.SetActive(true);
         changeIconAlpha();
         showerBar.AddFillPercentage(healQuantity);
-
-    }
-
-    public void AddCounter()
-    {
-        counter++;
+        movementsFinished++;
     }
 
     private void changeIconAlpha()

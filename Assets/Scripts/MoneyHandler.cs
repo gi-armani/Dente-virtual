@@ -6,13 +6,23 @@ using TMPro;
 
 public class MoneyHandler : MonoBehaviour
 {
-    public Resources resources;
+    [SerializeField] private Resources resources = default;
     private TextMeshProUGUI textComponent;
 
     void OnEnable()
     {
+        Resources.MoneyChanged += UpdateMoneyText;
+        UpdateMoneyText();
+    }
+
+    void OnDisable()
+    {
+        Resources.MoneyChanged -= UpdateMoneyText;
+    }
+
+    public void UpdateMoneyText()
+    {
         textComponent = GetComponent<TextMeshProUGUI>();
         textComponent.text = Convert.ToString(resources.Money);
     }
-
 }
