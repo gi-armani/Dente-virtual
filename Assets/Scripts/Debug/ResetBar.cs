@@ -13,5 +13,4 @@ public class ResetBar : MonoBehaviour
             barValues.AddFillPercentage(1);
         }
     }
-
 }
