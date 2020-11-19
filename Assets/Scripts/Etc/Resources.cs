@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class Resources : ScriptableObject
+public class Resources : PersistentScriptableObject
 {
     public int Money;
     public static Action MoneyChanged;

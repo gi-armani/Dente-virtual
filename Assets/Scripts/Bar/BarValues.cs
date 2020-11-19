@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class BarValues : ScriptableObject
+public class BarValues : PersistentScriptableObject
 {
     public float FillPercentage;
     public float DecayCooldown;

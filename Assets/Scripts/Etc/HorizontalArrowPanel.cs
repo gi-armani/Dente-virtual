@@ -58,12 +58,10 @@ public class HorizontalArrowPanel : MonoBehaviour
         
         float childWidth = (canvas.rect.width / visibleItemCount);
         float anchoredPositionX = childWidth / 2;
-        Debug.Log(childWidth + "child width");
         for(int i = 0; i < children.Length; i++)
         {
             children[i].sizeDelta = new Vector2(childWidth, scrollView.rect.height);
             children[i].anchoredPosition = new Vector2(anchoredPositionX, -scrollView.rect.height / 2);
-            Debug.Log($"child {i} {children[i].name} has anchored in x {anchoredPositionX}");
             anchoredPositionX += childWidth;
         }
     }
