@@ -2934,28 +2934,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231454058}
   m_CullTransparentMesh: 0
---- !u!1 &1247944547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 965953722, guid: 4be4b951204a56c4280714ab4a8f044d,
-    type: 3}
-  m_PrefabInstance: {fileID: 6951200106820087030}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1247944554
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247944547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 10.6, y: 38.1}
-  serializedVersion: 2
-  m_Radius: 44.57
 --- !u!1 &1346507765
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,22 +6258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 222982839}
     m_Modifications:
-    - target: {fileID: 758191741, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 965953722, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 965953726, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1349856849, guid: 4be4b951204a56c4280714ab4a8f044d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2785445430845512252, guid: 4be4b951204a56c4280714ab4a8f044d,
         type: 3}
       propertyPath: screenToOpen
@@ -6305,11 +6271,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShowerScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6951200108234779640, guid: 4be4b951204a56c4280714ab4a8f044d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6951200108234779641, guid: 4be4b951204a56c4280714ab4a8f044d,
         type: 3}
