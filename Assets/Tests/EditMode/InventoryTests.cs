@@ -38,8 +38,11 @@ namespace Tests
             // Prepare
             Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
             const string itemName = "item";
-            inventory.InventoryList[0] = new Item { itemName = itemName, amount = startAmount };
-            // inventory.InventoryList.Add(new Item { itemName = itemName, amount = 0 });
+
+            if(inventory.GetItem(itemName) == null)
+                inventory.InventoryList.Add(new Item { itemName = itemName, amount = 0 });
+            else
+                inventory.InventoryList[0] = new Item { itemName = itemName, amount = startAmount };
 
             // Act
             inventory.AddValue(itemName, quantity);
