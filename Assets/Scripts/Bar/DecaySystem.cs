@@ -6,8 +6,19 @@ using UnityEngine;
 public class DecaySystem : MonoBehaviour
 {
     public BarValues[] BarValuesArray = new BarValues[0];
+    private void Awake()
+    {
+        Application.quitting += Application_quitting;
+    }
+
+    private void Application_quitting()
+    {
+        Save(DateTime.Now);
+    }
+
     private void Start()
     {
+        Load(DateTime.Now);
         BarSelect();
     }
 
