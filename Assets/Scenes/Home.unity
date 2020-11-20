@@ -2504,6 +2504,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 749501957}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &803547210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4723944191082131147, guid: 2dd656846ff79354dbe6ab198224d45f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4723944191613027969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &803547214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803547210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badfd80f81a563f4ca0302b3a9b0ddfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyButton: {fileID: 901862435}
 --- !u!1001 &854465799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2804,7 +2823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &901862436
 RectTransform:
   m_ObjectHideFlags: 0

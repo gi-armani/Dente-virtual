@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopScreenItens : MonoBehaviour
+public class SpecificShopScreen : MonoBehaviour
 {
     public GameObject dentinho;
     private float inicialYPosition;
