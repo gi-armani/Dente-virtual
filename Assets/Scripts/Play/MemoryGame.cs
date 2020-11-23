@@ -11,6 +11,9 @@ public class MemoryGame : MonoBehaviour
     private int rows;
     private int cols;
 
+    public GameObject turnedCard1;
+    public GameObject turnedCard2;
+
     void OnEnable()
     {
         rows = 4;
@@ -45,6 +48,9 @@ public class MemoryGame : MonoBehaviour
         }
     }
 }
+
+
+
 
 public class Randomizer
 {

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &549908706820302102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 8950112474554346619}
   - component: {fileID: 8950112474554346621}
   - component: {fileID: 6916451727215877378}
+  - component: {fileID: 3997701442266374069}
   m_Layer: 5
   m_Name: PinkCard
   m_TagString: Untagged
@@ -268,3 +269,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3997701442266374069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950112474554346623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bba3e96182238c4c99a5a15d78cea3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  front: {fileID: 1486365082030413593}
