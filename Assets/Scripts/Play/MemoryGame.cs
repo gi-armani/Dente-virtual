@@ -11,8 +11,12 @@ public class MemoryGame : MonoBehaviour
     private int rows;
     private int cols;
 
-    public GameObject turnedCard1;
-    public GameObject turnedCard2;
+    public GameObject turnedCard1 = null;
+    public GameObject turnedCard2 = null;
+    public int matchCounter = 0;
+    private int victoryMatchGoal = 6;
+
+    [SerializeField] private Resources resources;
 
     void OnEnable()
     {
@@ -21,11 +25,14 @@ public class MemoryGame : MonoBehaviour
 
         PositionCards();
         dentinho.SetActive(false);
+        matchCounter = 0;
     }
 
     void OnDisable()
     {
         dentinho.SetActive(true);
+        turnedCard1 = null;
+        turnedCard2 = null;
     }
 
     void PositionCards()
@@ -46,6 +53,22 @@ public class MemoryGame : MonoBehaviour
                 card.transform.localPosition = newPosition;
             }
         }
+    }
+
+    public bool CheckIfMatched()
+    {
+        if (turnedCard1.name == turnedCard2.name)
+        {
+            matchCounter++;
+            if (matchCounter == victoryMatchGoal)
+            {
+                resources.AddMoney(500);
+            }
+
+            return true;
+        }
+
+        return false;
     }
 }
 
