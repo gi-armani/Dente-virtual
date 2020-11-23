@@ -2829,6 +2829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeaf42c13f071a4abf589549a48ad87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resources: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
+  inventory: {fileID: 11400000, guid: 1279ae022564ed142a84a1624d2128f3, type: 2}
   caller: {fileID: 0}
 --- !u!224 &909314988 stripped
 RectTransform:
