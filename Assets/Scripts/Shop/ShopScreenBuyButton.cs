@@ -7,6 +7,7 @@ public class ShopScreenBuyButton : MonoBehaviour
 {
     [SerializeField] private Resources resources = default;
     [SerializeField] private Inventory inventory = default;
+    [SerializeField] private ShopItemsPrices prices = default;
     public GameObject caller;
     void Start()
     {
@@ -17,6 +18,8 @@ public class ShopScreenBuyButton : MonoBehaviour
     public void BuyItem()
     {
         var itemName = caller.transform.parent.name;
+        int price =  prices.GetPrice(itemName);
+        resources.AddMoney(-(price));
         inventory.AddValue(itemName, 1);
     }
 

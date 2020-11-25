@@ -2831,6 +2831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
   inventory: {fileID: 11400000, guid: 1279ae022564ed142a84a1624d2128f3, type: 2}
+  prices: {fileID: 11400000, guid: 11eb2a9d0a5550142902e80fb6c2a0a6, type: 2}
   caller: {fileID: 0}
 --- !u!224 &909314988 stripped
 RectTransform:
