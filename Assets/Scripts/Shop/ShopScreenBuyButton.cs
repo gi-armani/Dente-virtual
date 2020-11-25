@@ -13,7 +13,6 @@ public class ShopScreenBuyButton : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(DisableCheck);
         GetComponent<Button>().onClick.AddListener(BuyItem);
     }
 
