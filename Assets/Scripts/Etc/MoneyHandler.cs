@@ -23,7 +23,7 @@ public class MoneyHandler : MonoBehaviour
             i++;
         }
     }
-
+    
     void OnEnable()
     {
         Resources.MoneyChanged += UpdateMoneyText;

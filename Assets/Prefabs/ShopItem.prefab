@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyButton: {fileID: 0}
+  text: {fileID: 4723944190812853314}
+  price: {fileID: 11400000, guid: 11eb2a9d0a5550142902e80fb6c2a0a6, type: 2}
   checkImage: {fileID: 5872188200065043695}
 --- !u!1 &5872188200065043695
 GameObject:

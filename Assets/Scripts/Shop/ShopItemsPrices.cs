@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class ShopItemsPrices : PersistentScriptableObject
+public class ShopItemsPrices : ScriptableObject
 {
     public List<ShopItem> ItemList = new List<ShopItem>();
 
