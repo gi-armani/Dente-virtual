@@ -7,14 +7,14 @@ using TMPro;
 
 public class ShopScreenItem : MonoBehaviour
 {
-    [SerializeField] private GameObject buyButton;
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private ShopItemsPrices price;
+    [SerializeField] private GameObject buyButton = default;
+    [SerializeField] private TextMeshProUGUI text = default;
+    [SerializeField] private ShopItemsPrices price = default;
     public GameObject checkImage;
-    private Color opaque = new Color(0,1, 21 / 225, 1);
+    private Color opaque = new Color(0, 1, 21 / 225, 1);
 
     void OnEnable()
-    {    
+    {
         text.text = Convert.ToString(price.GetPrice(gameObject.name));
     }
 

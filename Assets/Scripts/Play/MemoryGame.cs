@@ -16,7 +16,7 @@ public class MemoryGame : MonoBehaviour
     public int matchCounter = 0;
     private int victoryMatchGoal = 6;
 
-    [SerializeField] private Resources resources;
+    [SerializeField] private Resources resources = default;
 
     void OnEnable()
     {
