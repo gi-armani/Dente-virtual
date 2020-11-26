@@ -33,7 +33,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &476764297376622272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 1268803308142249018, guid: 4976d8e217c83e648ae381dfeac81175,
         type: 3}
       propertyPath: m_Name
-      value: MinigamesBtn
+      value: PlayBtn
       objectReference: {fileID: 0}
     - target: {fileID: 1268803308142249019, guid: 4976d8e217c83e648ae381dfeac81175,
         type: 3}
