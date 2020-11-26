@@ -64,7 +64,6 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         float threshold = 0.03f;
         bool biggerThan = (toothPasteBall.localScale.x >= desiredScale - threshold);
         bool lowerThan = (toothPasteBall.localScale.x <= desiredScale + threshold);
-        Debug.Log($"scale{toothPasteBall.localScale.x}|desired{desiredScale}: {biggerThan && lowerThan}");
         return biggerThan && lowerThan;
     }
 }
