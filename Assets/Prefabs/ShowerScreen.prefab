@@ -1297,7 +1297,10 @@ MonoBehaviour:
         m_CallState: 2
   toothPasteBall: {fileID: 6951200108475197421}
   scaleAmountPerTime: 0.5
+  desiredScale: 0.35
   maxScale: 1
+  money: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
+  moneyAmount: 50
 --- !u!95 &1392107895
 Animator:
   serializedVersion: 3

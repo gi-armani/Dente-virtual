@@ -8,10 +8,16 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 {
     public UnityEvent OnToothPasteDone = new UnityEvent();
 
+    [Header("References")]
     [SerializeField] private Transform toothPasteBall = null;
+    [Header("Scale settings")]
     [SerializeField] private float scaleAmountPerTime = 0.01f;
-    // [SerializeField] private float desiredScale = 0.5f;
+    [SerializeField] private float desiredScale = 0.5f;
     [SerializeField] private float maxScale = 1f;
+    [Header("Money Resource")]
+    [SerializeField] private Resources money = null;
+    [SerializeField] private int moneyAmount = 10;
+
     private bool _pointerDown = false;
     private Vector3 initialScale = Vector3.zero;
     private void Awake()
@@ -47,11 +53,18 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     {
         _pointerDown = false;
         OnToothPasteDone.Invoke();
+        if (VerifyScaleAmount())
+        {
+            money.AddMoney(moneyAmount);
+        }
     }
 
-    // Nao pronta
-    private bool VerifyScaleAmount()
+    public bool VerifyScaleAmount()
     {
-        return false;
+        float threshold = 0.03f;
+        bool biggerThan = (toothPasteBall.localScale.x >= desiredScale - threshold);
+        bool lowerThan = (toothPasteBall.localScale.x <= desiredScale + threshold);
+        Debug.Log($"scale{toothPasteBall.localScale.x}|desired{desiredScale}: {biggerThan && lowerThan}");
+        return biggerThan && lowerThan;
     }
 }
