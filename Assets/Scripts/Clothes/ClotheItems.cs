@@ -22,15 +22,41 @@ public class ClotheItems : MonoBehaviour
 
     public void ChangeClothes()
     {
+        Color currentColor = GetComponent<Image>().color;
+
         Dentinho.transform.Find("Cape").gameObject.SetActive(false);
         Dentinho.transform.Find("Armor").gameObject.SetActive(false);
         Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
         Dentinho.transform.Find("LongHair").gameObject.SetActive(false);
 
-        if (type == ClothesType.Cape) Dentinho.transform.Find("Cape").gameObject.SetActive(true);
-        if (type == ClothesType.Armor) Dentinho.transform.Find("Armor").gameObject.SetActive(true);
-        if (type == ClothesType.ShortHair) Dentinho.transform.Find("ShortHair").gameObject.SetActive(true);
-        if (type == ClothesType.LongHair) Dentinho.transform.Find("LongHair").gameObject.SetActive(true);
+        if (type == ClothesType.Cape)
+        {
+            GameObject cape = Dentinho.transform.Find("Cape").gameObject;
+            cape.SetActive(true);
+            cape.GetComponent<Image>().color = currentColor;
+        }
+
+        if (type == ClothesType.Armor)
+        {
+            GameObject armor = Dentinho.transform.Find("Armor").gameObject;
+            armor.SetActive(true);
+            armor.GetComponent<Image>().color = currentColor;
+        }
+            
+        if (type == ClothesType.ShortHair)
+        {
+            GameObject shortHair = Dentinho.transform.Find("ShortHair").gameObject;
+            shortHair.SetActive(true);
+            shortHair.GetComponent<Image>().color = currentColor;
+        }
+            
+        if (type == ClothesType.LongHair)
+        {
+            GameObject longHair = Dentinho.transform.Find("LongHair").gameObject;
+            longHair.SetActive(true);
+            longHair.GetComponent<Image>().color = currentColor;
+        }
+            
 
     }
 }
