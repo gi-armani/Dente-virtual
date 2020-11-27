@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 102961054}
   - component: {fileID: 102961053}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: LogoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 142788237}
   - component: {fileID: 142788236}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: WelcomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 619864829}
   - component: {fileID: 619864828}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 0
+  m_CharacterLimit: 25
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -982,7 +982,6 @@ GameObject:
   m_Component:
   - component: {fileID: 728515510}
   - component: {fileID: 728515512}
-  - component: {fileID: 728515511}
   m_Layer: 5
   m_Name: Dente
   m_TagString: Untagged
@@ -1010,18 +1009,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &728515511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728515509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b89af30394452f4c8de87486ce12330, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &728515512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1474,6 +1461,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694826371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694826373}
+  - component: {fileID: 1694826372}
+  m_Layer: 0
+  m_Name: NameHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1694826372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694826371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada4170bbb67e966abf2750524135cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 619864828}
+  button: {fileID: 392346757}
+--- !u!4 &1694826373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694826371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.78442144, y: -0.05124415, z: 346.17166}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824590755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1517,6 @@ GameObject:
   - component: {fileID: 1824590759}
   - component: {fileID: 1824590758}
   - component: {fileID: 1824590756}
-  - component: {fileID: 1824590757}
   m_Layer: 5
   m_Name: DenteImage
   m_TagString: Untagged
@@ -1523,33 +1554,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1824590757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824590755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d122b9f02bf7a9541aff71a35d4a380a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainBar: {fileID: 0}
-  VeryHappySprite: {fileID: 7839472567634266479, guid: 159765ac1cf202c498f6c2793d9c63c8,
-    type: 3}
-  HappySprite: {fileID: -8221802452147339452, guid: 6617e30406481024db5fa315adad988e,
-    type: 3}
-  NeutralSprite: {fileID: -5976307804602949683, guid: b841051c9fd86a341a8b4acaa5fc8dd7,
-    type: 3}
-  SadSprite: {fileID: 8298316641218103250, guid: f8eb58b38bf18c044bc1aa282be1d7a1,
-    type: 3}
-  VerySadSprite: {fileID: 5917066225504398786, guid: 579f213da7d9bad44ae817c417f84864,
-    type: 3}
-  HappyUpperLimit: 0.8
-  NeutralUpperLimit: 0.6
-  SadUpperLimit: 0.4
-  VerySadUpperLimit: 0.2
 --- !u!222 &1824590758
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1589,7 +1593,7 @@ GameObject:
   - component: {fileID: 2073968263}
   - component: {fileID: 2073968262}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
