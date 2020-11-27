@@ -20,11 +20,10 @@ public class Dirt : MonoBehaviour
     public float MediumLimit = 0.4f;
     public float LowerLimit = 0.2f;
 
-    Image dentinhoImage;
+    [SerializeField] private Image dentinhoImage;
 
     public void Start()
     {
-        dentinhoImage = transform.parent.gameObject.GetComponent<Image>();
         NoDirtColor = new Color(1, 1, 1, 1);
     }
 
