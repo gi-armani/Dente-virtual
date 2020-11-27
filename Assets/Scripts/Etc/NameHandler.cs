@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class NameHandler : MonoBehaviour
 {
@@ -12,9 +13,16 @@ public class NameHandler : MonoBehaviour
 
     private void Awake()
     {
-        inputField.onTouchScreenKeyboardStatusChanged.AddListener(ShowButton);
-        inputField.onSelect.AddListener(arg0 => Debug.Log("testeee"));
-        button.onClick.AddListener(SaveName);
+        if (File.Exists(GetPath()))
+        {
+            SceneManager.LoadScene(1);
+        }
+        else
+        {
+            inputField.onTouchScreenKeyboardStatusChanged.AddListener(ShowButton);
+            inputField.onSubmit.AddListener(ShowButton);
+            button.onClick.AddListener(SaveName);
+        }
     }
 
     private void ShowButton(TouchScreenKeyboard.Status tsk)
@@ -23,15 +31,22 @@ public class NameHandler : MonoBehaviour
             button.gameObject.SetActive(true);
     }
 
+    private void ShowButton(String s)
+    {
+        button.gameObject.SetActive(true);
+    }
+
     private void SaveName()
     {
         if (!String.IsNullOrEmpty(inputField.text))
         {
+            Debug.Log(GetPath());
             File.WriteAllText(GetPath(), inputField.text);
+            SceneManager.LoadScene(1);
         }
     }
     
-    private string GetPath()
+    public static string GetPath()
     {
         return Path.Combine(Application.persistentDataPath, path + ".txt");
     }
