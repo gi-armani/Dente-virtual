@@ -29,5 +29,10 @@ public class SpecificShopScreen : MonoBehaviour
 
         dentinho.transform.Find("Stage").gameObject.SetActive(false);
         dentinho.transform.Find("Light").gameObject.SetActive(false);
+
+        dentinho.transform.Find("Cape").gameObject.SetActive(false);
+        dentinho.transform.Find("Armor").gameObject.SetActive(false);
+        dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
+        dentinho.transform.Find("LongHair").gameObject.SetActive(false);
     }
 }
