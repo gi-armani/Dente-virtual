@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class Inventory : PersistentScriptableObject
+public class Inventory : ScriptableObject
 {
     public List<Item> InventoryList = new List<Item>();
 
@@ -39,4 +39,5 @@ public class Item
     [Range(0, 1)]
     public float healAmount = 0.2f;
     public bool IsHealthy;
+    public Color itemColor;
 }
