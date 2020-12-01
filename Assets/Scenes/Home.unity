@@ -8445,6 +8445,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685efcebe762fd549bbcf1d46b688029, type: 3}
+--- !u!1 &1516536626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516536628}
+  - component: {fileID: 1516536627}
+  m_Layer: 0
+  m_Name: Save Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1516536627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516536626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c087ade955fcaa4d82df1ce8d2a7318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistentScriptableObjects:
+  - {fileID: 11400000, guid: b1057be7e2bf4c4439777e78f0d66c70, type: 2}
+  - {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483, type: 2}
+  - {fileID: 11400000, guid: 1279ae022564ed142a84a1624d2128f3, type: 2}
+  - {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
+  - {fileID: 11400000, guid: cd46e6b507bb4af43b9a6620e232005a, type: 2}
+  - {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
+  - {fileID: 11400000, guid: c83428ee597baaa4a86551bc1805ea2d, type: 2}
+--- !u!4 &1516536628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516536626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1545551181 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1268803308142249019, guid: 4976d8e217c83e648ae381dfeac81175,

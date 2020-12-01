@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -26,7 +23,7 @@ public abstract class PersistentScriptableObject : ScriptableObject
         }
     }
 
-    private string GetPath()
+    public string GetPath()
     {
         var directoryPath = Path.Combine(Application.persistentDataPath, this.GetType().Name);
 
