@@ -20,6 +20,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         QuantityText.text = "x" + Inventory.GetQuantity(gameObject.name);
     }
 
+    private void OnDisable()
+    {
+        DragImage.transform.position = transform.position;
+        DragImage.gameObject.SetActive(false);
+    }
+
     private void Awake()
     {
         _mainCamera = Camera.main;
