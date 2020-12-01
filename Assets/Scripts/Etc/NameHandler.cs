@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class NameHandler : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private Button button;
+    [SerializeField] private TMP_InputField inputField = default;
+    [SerializeField] private Button button = default;
     private const string path = "DentinhoNameFile";
 
     private void Awake()
@@ -27,7 +27,7 @@ public class NameHandler : MonoBehaviour
 
     private void ShowButton(TouchScreenKeyboard.Status tsk)
     {
-        if(tsk == TouchScreenKeyboard.Status.Done)
+        if (tsk == TouchScreenKeyboard.Status.Done)
             button.gameObject.SetActive(true);
     }
 
@@ -45,7 +45,7 @@ public class NameHandler : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
-    
+
     public static string GetPath()
     {
         return Path.Combine(Application.persistentDataPath, path + ".txt");

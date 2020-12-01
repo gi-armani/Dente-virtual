@@ -20,7 +20,7 @@ public class Dirt : MonoBehaviour
     public float MediumLimit = 0.4f;
     public float LowerLimit = 0.2f;
 
-    [SerializeField] private Image dentinhoImage;
+    [SerializeField] private Image dentinhoImage = default;
 
     public void Start()
     {
