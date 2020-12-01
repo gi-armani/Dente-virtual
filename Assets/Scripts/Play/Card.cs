@@ -16,6 +16,8 @@ public class Card : MonoBehaviour
 
     public void TurnCard()
     {
+        if (front.activeSelf) return;
+
         front.SetActive(true);
         if (game.turnedCard1 == null)
         {
@@ -24,13 +26,13 @@ public class Card : MonoBehaviour
         else
         {
             game.turnedCard2 = gameObject;
-            if (!game.CheckIfMatched())
+            if (game.CheckIfMatched())
             {
-                StartCoroutine(nameof(UnturnCards), 1f);
+                SetCardsToNull();
             }
             else
             {
-                SetCardsToNull();
+                StartCoroutine(nameof(UnturnCards), 1f);
             }
         }
     }

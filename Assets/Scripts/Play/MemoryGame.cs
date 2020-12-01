@@ -3,9 +3,11 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MemoryGame : MonoBehaviour
 {
+    public int moneyReward;
     public GameObject dentinho;
     public GameObject[] Cards;
     private int rows;
@@ -33,6 +35,10 @@ public class MemoryGame : MonoBehaviour
         dentinho.SetActive(true);
         turnedCard1 = null;
         turnedCard2 = null;
+        foreach (var card in Cards)
+        {
+            card.GetComponent<Button>().enabled = true;
+        }
     }
 
     void PositionCards()
@@ -62,7 +68,7 @@ public class MemoryGame : MonoBehaviour
             matchCounter++;
             if (matchCounter == victoryMatchGoal)
             {
-                resources.AddMoney(500);
+                resources.AddMoney(moneyReward);
             }
 
             return true;
