@@ -26,15 +26,34 @@ public class ShopScreenItem : MonoBehaviour
 
     void ShowButton()
     {
-        var caller = buyButton.GetComponent<ShopScreenBuyButton>().caller;
+        var defaultScript = buyButton.GetComponent<ShopScreenBuyButton>();
 
-        if (caller != null)
+        if(defaultScript != null)
         {
-            buyButton.GetComponent<ShopScreenBuyButton>().DisableCheck();
-        }
+            var caller = defaultScript.caller;
 
-        buyButton.SetActive(true);
-        checkImage.GetComponent<Image>().color = opaque;
-        buyButton.GetComponent<ShopScreenBuyButton>().caller = checkImage;
+            if (caller != null)
+            {
+                defaultScript.DisableCheck();
+            }
+
+            buyButton.SetActive(true);
+            checkImage.GetComponent<Image>().color = opaque;
+            defaultScript.caller = checkImage;
+        }
+        else
+        {
+            var clothesScript = buyButton.GetComponent<ClothesScreenBuyButton>();
+            var caller = clothesScript.caller;
+
+            if (caller != null)
+            {
+                clothesScript.DisableCheck();
+            }
+
+            buyButton.SetActive(true);
+            checkImage.GetComponent<Image>().color = opaque;
+            clothesScript.caller = checkImage;
+        }
     }
 }

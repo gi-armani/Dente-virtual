@@ -3,12 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClothesScreenBuyButton : ShopScreenBuyButton
+public class ClothesScreenBuyButton : MonoBehaviour
 {
-    public new void BuyItem()
+    [SerializeField] private Resources resources = default;
+    public Wardrobe wardrobe = default;
+    [SerializeField] private ShopItemsPrices prices = default;
+    [SerializeField] private MoneyHandler money = default;
+    public GameObject caller;
+
+    void Start()
+    {
+        GetComponent<Button>().onClick.AddListener(BuyItem);
+    }
+
+    public void BuyItem()
     {
         var itemName = caller.transform.parent.name;
-        var qntItem = inventory.GetQuantity(itemName);
-        if (qntItem == 0) base.BuyItem();
+        var price = prices.GetPrice(itemName);
+
+        if(resources.Money >= price)
+        {
+            if(!wardrobe.PlayerHas(itemName)){
+                resources.AddMoney(-(price));
+                wardrobe.AddClothes(itemName);
+
+                bool isDev = true;
+                if(isDev){
+                    caller.transform.parent.gameObject.SetActive(false);
+                } else{
+                    Object.Destroy(caller.transform.parent.gameObject);
+                }
+            }
+        }
+        else
+        {
+            StartCoroutine(money.BlinkRed());
+        }
+    }
+
+    public void DisableCheck()
+    {
+        caller.GetComponent<Image>().color = Color.clear;
     }
 }

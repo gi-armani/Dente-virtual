@@ -25,3 +25,5 @@ MonoBehaviour:
     price: 40
   - itemName: BlueHelmet
     price: 40
+  - itemName: BlueShortHair
+    price: 40

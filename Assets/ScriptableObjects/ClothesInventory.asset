@@ -9,37 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af197c5a6b5a3174cb547caa0f508f61, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e9d5e5f77615b7f5802ac8fce42499f, type: 3}
   m_Name: ClothesInventory
   m_EditorClassIdentifier: 
-  InventoryList:
+  WardrobeList:
   - itemName: BlackCape
-    amount: 6
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 0}
+    type: 2
   - itemName: RedCape
-    amount: 7
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.8980392, g: 0.3254902, b: 0.3254902, a: 0}
+    type: 2
   - itemName: BlueCape
-    amount: 0
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.40784314, g: 0.52156866, b: 0.7921569, a: 0}
+    type: 2
   - itemName: BlackHelmet
-    amount: 0
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 0}
+    type: 3
   - itemName: RedHelmet
-    amount: 1
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.8980392, g: 0.3254902, b: 0.3254902, a: 0}
+    type: 3
   - itemName: BlueHelmet
-    amount: 0
-    healAmount: 0
-    IsHealthy: 0
+    has: 0
     itemColor: {r: 0.40784314, g: 0.52156866, b: 0.7921569, a: 0}
+    type: 0

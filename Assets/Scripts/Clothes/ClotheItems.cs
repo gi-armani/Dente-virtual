@@ -42,21 +42,21 @@ public class ClotheItems : MonoBehaviour
             armor.SetActive(true);
             armor.GetComponent<Image>().color = currentColor;
         }
-            
+
         if (type == ClothesType.ShortHair)
         {
             GameObject shortHair = Dentinho.transform.Find("ShortHair").gameObject;
             shortHair.SetActive(true);
             shortHair.GetComponent<Image>().color = currentColor;
         }
-            
+
         if (type == ClothesType.LongHair)
         {
             GameObject longHair = Dentinho.transform.Find("LongHair").gameObject;
             longHair.SetActive(true);
             longHair.GetComponent<Image>().color = currentColor;
         }
-            
+
 
     }
 }

@@ -38,5 +38,4 @@ public class Item
     [Range(0, 1)]
     public float healAmount = 0.2f;
     public bool IsHealthy;
-    public Color itemColor;
 }
