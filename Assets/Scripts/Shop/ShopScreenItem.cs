@@ -18,6 +18,11 @@ public class ShopScreenItem : MonoBehaviour
         text.text = Convert.ToString(price.GetPrice(gameObject.name));
     }
 
+    private void OnDisable()
+    {
+        buyButton.SetActive(false);
+    }
+
     void Start()
     {
         checkImage.GetComponent<Image>().color = Color.clear;

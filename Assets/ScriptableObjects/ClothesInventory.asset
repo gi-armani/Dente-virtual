@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WardrobeList:
   - itemName: BlackCape
-    has: 0
+    has: 1
     itemColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 0}
     type: 2
   - itemName: RedCape
-    has: 0
+    has: 1
     itemColor: {r: 0.8980392, g: 0.3254902, b: 0.3254902, a: 0}
     type: 2
   - itemName: BlueCape
-    has: 0
+    has: 1
     itemColor: {r: 0.40784314, g: 0.52156866, b: 0.7921569, a: 0}
     type: 2
   - itemName: BlackHelmet
-    has: 0
+    has: 1
     itemColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 0}
     type: 3
   - itemName: RedHelmet
-    has: 0
+    has: 1
     itemColor: {r: 0.8980392, g: 0.3254902, b: 0.3254902, a: 0}
     type: 3
   - itemName: BlueHelmet
-    has: 0
+    has: 1
     itemColor: {r: 0.40784314, g: 0.52156866, b: 0.7921569, a: 0}
     type: 0

@@ -21725,7 +21725,7 @@ PrefabInstance:
     - target: {fileID: 6411541458438385416, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
       propertyPath: m_Name
-      value: Cape
+      value: BlackCape
       objectReference: {fileID: 0}
     - target: {fileID: 6411541458438385416, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
