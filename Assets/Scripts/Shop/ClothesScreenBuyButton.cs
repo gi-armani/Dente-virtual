@@ -9,6 +9,7 @@ public class ClothesScreenBuyButton : MonoBehaviour
     public Wardrobe wardrobe = default;
     [SerializeField] private ShopItemsPrices prices = default;
     [SerializeField] private MoneyHandler money = default;
+    [SerializeField] private ShowIsEmptyMessage emptyMessageDisplayer = default;
     public GameObject caller;
 
     void Start()
@@ -33,6 +34,8 @@ public class ClothesScreenBuyButton : MonoBehaviour
                 } else{
                     Object.Destroy(caller.transform.parent.gameObject);
                 }
+
+                emptyMessageDisplayer.ShowMessage();
             }
         }
         else
