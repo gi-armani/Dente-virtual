@@ -5,10 +5,13 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using RoboRyanTron.Unite2017.Events;
 
 public class FoodItem : DraggableItem
 {
     Emote emote;
+    [SerializeField] private GameEvent healthFoodGiven = default;
+    [SerializeField] private GameEvent unhealthFoodGiven = default;
     [SerializeField] private Resources resources = default;
     [SerializeField] private int moneyReward = default;
 
@@ -24,13 +27,14 @@ public class FoodItem : DraggableItem
             UseItem();
             if (item.IsHealthy)
             {
-
                 resources.AddMoney(moneyReward);
                 StartCoroutine(emote.ShowBalloon(true));
+                healthFoodGiven.Raise();
             }
             else
             {
                 StartCoroutine(emote.ShowBalloon(false));
+                unhealthFoodGiven.Raise();
             }
         }
     }
