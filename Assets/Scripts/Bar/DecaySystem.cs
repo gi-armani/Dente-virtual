@@ -16,9 +16,22 @@ public class DecaySystem : MonoBehaviour
         Save(DateTime.Now);
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            Save(DateTime.Now);
+            Debug.Log("Sem foco");
+        }
+        else
+        {
+            Load(DateTime.Now);
+            Debug.Log("Com foco");
+        }
+    }
+
     private void Start()
     {
-        Load(DateTime.Now);
         BarSelect();
     }
 
