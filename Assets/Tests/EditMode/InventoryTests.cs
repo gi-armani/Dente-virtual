@@ -40,7 +40,7 @@ namespace Tests
             const string itemName = "item";
 
             if(inventory.GetItem(itemName) == null)
-                inventory.InventoryList.Add(new Item { itemName = itemName, amount = 0 });
+                inventory.InventoryList.Add(new Item { itemName = itemName, amount = startAmount });
             else
                 inventory.InventoryList[0] = new Item { itemName = itemName, amount = startAmount };
 
