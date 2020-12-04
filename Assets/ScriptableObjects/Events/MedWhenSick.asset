@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afde042156902ab4b9521d2a74eb2466, type: 3}
-  m_Name: UnhealthFoodGiven
+  m_Name: MedWhenSick
   m_EditorClassIdentifier: 

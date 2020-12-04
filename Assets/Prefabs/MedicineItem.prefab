@@ -302,3 +302,7 @@ MonoBehaviour:
   BarValues: {fileID: 11400000, guid: 108d165688627df4382e1ca296388866, type: 2}
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}
+  useMedicineWhenSick: {fileID: 11400000, guid: fce6ce02c7cf5de39acf12245890faf8,
+    type: 2}
+  useMedicineWhenHealthy: {fileID: 11400000, guid: e14cabbcc1fd461168491b4e2ad80922,
+    type: 2}
