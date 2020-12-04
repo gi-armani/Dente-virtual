@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using TMPro;
-using UnityEngine.UI;
-using System;
 using RoboRyanTron.Unite2017.Events;
 
 public class MedicineItem : DraggableItem
@@ -12,8 +6,8 @@ public class MedicineItem : DraggableItem
     Thermometer thermometer;
     Emote emote;
 
-    [SerializeField] private GameEvent useMedicineWhenSick;
-    [SerializeField] private GameEvent useMedicineWhenHealthy;
+    [SerializeField] private GameEvent useMedicineWhenSick = default;
+    [SerializeField] private GameEvent useMedicineWhenHealthy = default;
     
     private void Start()
     {
