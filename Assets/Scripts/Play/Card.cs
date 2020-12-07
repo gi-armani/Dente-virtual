@@ -37,7 +37,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         front.SetActive(false);
     }
@@ -48,8 +48,8 @@ public class Card : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
 
-        game.turnedCard1.GetComponent<Card>().front.SetActive(false);
-        game.turnedCard2.GetComponent<Card>().front.SetActive(false);
+        game.turnedCard1?.GetComponent<Card>().front.SetActive(false);
+        game.turnedCard2?.GetComponent<Card>().front.SetActive(false);
         SetCardsToNull();
         SetClickStateOnCards(true);
     }

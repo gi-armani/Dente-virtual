@@ -12,22 +12,35 @@ public class MemoryGame : MonoBehaviour
     public GameObject[] Cards;
     private int rows;
     private int cols;
-
+    private int mistakeCounter;
     public GameObject turnedCard1 = null;
     public GameObject turnedCard2 = null;
     public int matchCounter = 0;
     private int victoryMatchGoal = 6;
 
+    [SerializeField] private int maxMistakes = default;
     [SerializeField] private Resources resources = default;
 
     void OnEnable()
     {
         rows = 4;
         cols = 3;
-
+        mistakeCounter = 0;
         PositionCards();
         dentinho.SetActive(false);
         matchCounter = 0;
+    }
+
+    void ResetCards()
+    {
+        foreach (var card in Cards)
+        {
+            card.GetComponent<Card>().OnDisable();
+            card.GetComponent<Button>().enabled = true;
+        }
+        matchCounter = 0;
+        mistakeCounter = 0;
+        PositionCards();
     }
 
     void OnDisable()
@@ -72,6 +85,14 @@ public class MemoryGame : MonoBehaviour
             }
 
             return true;
+        }
+        else
+        {   
+
+            if(++mistakeCounter > maxMistakes)
+            {
+                ResetCards();
+            }
         }
 
         return false;
