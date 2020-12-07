@@ -24,11 +24,6 @@ public class ClothesItems : MonoBehaviour
     {
         Color currentColor = GetComponent<Image>().color;
 
-        Dentinho.transform.Find("Cape").gameObject.SetActive(false);
-        Dentinho.transform.Find("Armor").gameObject.SetActive(false);
-        Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
-        Dentinho.transform.Find("LongHair").gameObject.SetActive(false);
-
         if (type == ClothesType.Cape)
         {
             GameObject cape = Dentinho.transform.Find("Cape").gameObject;
@@ -41,6 +36,9 @@ public class ClothesItems : MonoBehaviour
             GameObject armor = Dentinho.transform.Find("Armor").gameObject;
             armor.SetActive(true);
             armor.GetComponent<Image>().color = currentColor;
+            
+            Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
+            Dentinho.transform.Find("LongHair").gameObject.SetActive(false);
         }
 
         if (type == ClothesType.ShortHair)
@@ -48,6 +46,9 @@ public class ClothesItems : MonoBehaviour
             GameObject shortHair = Dentinho.transform.Find("ShortHair").gameObject;
             shortHair.SetActive(true);
             shortHair.GetComponent<Image>().color = currentColor;
+            
+            Dentinho.transform.Find("Armor").gameObject.SetActive(false);
+            Dentinho.transform.Find("LongHair").gameObject.SetActive(false);
         }
 
         if (type == ClothesType.LongHair)
@@ -55,6 +56,9 @@ public class ClothesItems : MonoBehaviour
             GameObject longHair = Dentinho.transform.Find("LongHair").gameObject;
             longHair.SetActive(true);
             longHair.GetComponent<Image>().color = currentColor;
+            
+            Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
+            Dentinho.transform.Find("Armor").gameObject.SetActive(false);
         }
     }
 }
