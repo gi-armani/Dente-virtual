@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using RoboRyanTron.Unite2017.Events;
 
 public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -17,6 +18,7 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [Header("Money Resource")]
     [SerializeField] private Resources money = null;
     [SerializeField] private int moneyAmount = 10;
+    [SerializeField] private GameEvent pasteScale = default;
 
     private bool _pointerDown = false;
     private Vector3 initialScale = Vector3.zero;
@@ -56,6 +58,7 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (VerifyScaleAmount())
         {
             money.AddMoney(moneyAmount);
+            pasteScale.Raise();
         }
     }
 
