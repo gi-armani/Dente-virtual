@@ -4143,7 +4143,7 @@ PrefabInstance:
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3622.4941
+      value: 3623.2039
       objectReference: {fileID: 0}
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
@@ -6801,6 +6801,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
+  Cape: {fileID: 2025748734}
+  Armor: {fileID: 307405309}
+  ShortHair: {fileID: 2065653991}
+  LongHair: {fileID: 1488575288}
 --- !u!114 &629794731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9495,7 +9499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &852525516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14206,7 +14210,7 @@ PrefabInstance:
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2122.4941
+      value: 2873.2039
       objectReference: {fileID: 0}
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
@@ -15020,6 +15024,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
+  Cape: {fileID: 2025748734}
+  Armor: {fileID: 307405309}
+  ShortHair: {fileID: 2065653991}
+  LongHair: {fileID: 1488575288}
 --- !u!1 &1348153151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4723944191082131147, guid: 2dd656846ff79354dbe6ab198224d45f,
@@ -23230,6 +23238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
+  Cape: {fileID: 2025748734}
+  Armor: {fileID: 307405309}
+  ShortHair: {fileID: 2065653991}
+  LongHair: {fileID: 1488575288}
 --- !u!1 &2037944287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6363724696359506629, guid: 09cee2f92e3671f4695435be3a584440,
@@ -25222,7 +25234,7 @@ PrefabInstance:
     - target: {fileID: 1907819419164097150, guid: 7c236ba68d1f3844dbdd8d978cdaabe8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1907819419164097151, guid: 7c236ba68d1f3844dbdd8d978cdaabe8,
         type: 3}
@@ -26051,7 +26063,7 @@ PrefabInstance:
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 622.49414
+      value: 2123.2039
       objectReference: {fileID: 0}
     - target: {fileID: 6411541458438385417, guid: 416608922fc24f54ab2f05e6ee50bc4e,
         type: 3}

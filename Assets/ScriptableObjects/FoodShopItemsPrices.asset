@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemList:
   - itemName: Apple
-    price: 1
+    price: 5
   - itemName: Banana
-    price: 1
+    price: 5
   - itemName: Salad
     price: 20
   - itemName: Grape
-    price: 20
+    price: 5
   - itemName: Water
     price: 20
   - itemName: Carrot
-    price: 20
+    price: 5
   - itemName: Brigadeiro
-    price: 20
+    price: 5
   - itemName: Candy
-    price: 20
+    price: 5
   - itemName: Lollipop
-    price: 20
+    price: 5
   - itemName: Soda
     price: 20
   - itemName: Cookie
