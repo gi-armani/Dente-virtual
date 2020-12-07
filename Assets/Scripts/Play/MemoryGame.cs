@@ -12,13 +12,14 @@ public class MemoryGame : MonoBehaviour
     public GameObject[] Cards;
     private int rows;
     private int cols;
-    private int mistakeCounter;
+    public int mistakeCounter;
     public GameObject turnedCard1 = null;
     public GameObject turnedCard2 = null;
     public int matchCounter = 0;
     private int victoryMatchGoal = 6;
+    public Action mistake;
 
-    [SerializeField] private int maxMistakes = default;
+    [SerializeField] public int maxMistakes = default;
     [SerializeField] private Resources resources = default;
 
     void OnEnable()
@@ -88,7 +89,7 @@ public class MemoryGame : MonoBehaviour
         }
         else
         {   
-
+            mistake?.Invoke();
             if(++mistakeCounter > maxMistakes)
             {
                 ResetCards();
