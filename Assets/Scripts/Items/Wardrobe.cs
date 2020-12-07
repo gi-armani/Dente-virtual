@@ -35,5 +35,5 @@ public class ClothesItem
     public string itemName;
     public bool has;
     public Color itemColor;
-    public ClotheItems.ClothesType type;
+    public ClothesItems.ClothesType type;
 }

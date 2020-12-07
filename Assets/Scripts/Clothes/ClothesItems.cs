@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClotheItems : MonoBehaviour
+public class ClothesItems : MonoBehaviour
 {
     public GameObject Dentinho;
     public enum ClothesType
