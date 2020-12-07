@@ -9403,9 +9403,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849062402}
-  - component: {fileID: 849062405}
   - component: {fileID: 849062404}
   - component: {fileID: 849062403}
+  - component: {fileID: 849062405}
   m_Layer: 5
   m_Name: ClothesScreenArmors
   m_TagString: Untagged
@@ -9473,7 +9473,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 849062401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b10c7165ea1be4cb05c4e3f595e530, type: 3}
+  m_Script: {fileID: 11500000, guid: d048294af6d2008a5a12400e3ed18afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
@@ -9486,16 +9486,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 852525516}
-  - component: {fileID: 852525517}
   - component: {fileID: 852525518}
   - component: {fileID: 852525519}
+  - component: {fileID: 852525517}
   m_Layer: 5
   m_Name: ClothesScreenCapes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &852525516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9527,7 +9527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 852525515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b10c7165ea1be4cb05c4e3f595e530, type: 3}
+  m_Script: {fileID: 11500000, guid: d048294af6d2008a5a12400e3ed18afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
@@ -10275,9 +10275,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916363439}
-  - component: {fileID: 916363442}
   - component: {fileID: 916363441}
   - component: {fileID: 916363440}
+  - component: {fileID: 916363442}
   m_Layer: 5
   m_Name: ClothesScreenHairs
   m_TagString: Untagged
@@ -10345,7 +10345,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 916363438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b10c7165ea1be4cb05c4e3f595e530, type: 3}
+  m_Script: {fileID: 11500000, guid: d048294af6d2008a5a12400e3ed18afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dentinho: {fileID: 25091109}
@@ -25010,7 +25010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 890.46857, y: -200.00009}
+  m_AnchoredPosition: {x: 891.03455, y: -200.00009}
   m_SizeDelta: {x: 388, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2347337754443152402
@@ -25083,7 +25083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540.06854, y: -200.00009}
+  m_AnchoredPosition: {x: 540.6345, y: -200.00009}
   m_SizeDelta: {x: 388, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2347337754453131187
@@ -25132,7 +25132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189.66858, y: -200.00009}
+  m_AnchoredPosition: {x: 190.23454, y: -200.00009}
   m_SizeDelta: {x: 388, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2347337755385201221
@@ -28262,7 +28262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &6753630354751108601
 PrefabInstance:
   m_ObjectHideFlags: 0

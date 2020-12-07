@@ -56,7 +56,5 @@ public class ClotheItems : MonoBehaviour
             longHair.SetActive(true);
             longHair.GetComponent<Image>().color = currentColor;
         }
-
-
     }
 }
