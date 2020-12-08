@@ -10,8 +10,11 @@ public class ShopItemsPrices : ScriptableObject
     public int GetPrice(string name)
     {
         var item = ItemList.Find(x => x.itemName == name);
+        if (item == null) return 0;
+
         return item.price;
     }
+
     public ShopItem GetItem(string name)
     {
         var item = ItemList.Find(x => x.itemName == name);
@@ -24,5 +27,4 @@ public class ShopItem
 {
     public string itemName;
     public int price;
-
 }
