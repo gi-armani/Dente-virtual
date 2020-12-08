@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -39,6 +40,22 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         // position.z = mainCamera.transform.position.z + 1;
         position.z = 5;
         movingBrush.transform.position = position;
+        instantiateImage(movingBrush.transform.position);
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        // NÃO TA FUNCIONANDO
+        if(other.gameObject.name == "Dente"){
+            instantiateImage(movingBrush.transform.position);
+        }
+    }
+
+    private void instantiateImage(Vector3 position){
+        var canvas = GameObject.Find("Canvas");
+        // Pega referência ao prefab de Bubble
+        var bubblePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Bubble.prefab");
+        // Instancia uma bubble na posição
+        var screenToOpen = GameObject.Instantiate(bubblePrefab, position, Quaternion.identity, canvas.transform);
     }
 
     public void OnEndDrag(PointerEventData eventData)
