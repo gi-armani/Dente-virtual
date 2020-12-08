@@ -34,32 +34,72 @@ namespace Tests
             ScriptableObject.DestroyImmediate(shopPrices);
         }
 
-        // [Test]
-        // [TestCase(0, 1)]
-        // [TestCase(0, -1)]
-        // [TestCase(3, -10)]
-        // [TestCase(3, 50)]
-        // public void add_item_with_quantity(int startAmount, int quantity)
-        // {
-        //     // Prepare
-        //     Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
-        //     const string itemName = "item";
+        [Test]
+        public void get_item_from_empty_shop_prices()
+        {
+            // Prepare
+            ShopItemsPrices shopPrices = ScriptableObject.CreateInstance<ShopItemsPrices>();
 
-        //     if (inventory.GetItem(itemName) == null)
-        //         inventory.InventoryList.Add(new Item { itemName = itemName, amount = startAmount });
-        //     else
-        //         inventory.InventoryList[0] = new Item { itemName = itemName, amount = startAmount };
+            // Act
+            ShopItem returnedItem = shopPrices.GetItem("TestItem");
+            int returnedPrice = shopPrices.GetPrice("TestItem");
 
-        //     // Act
-        //     inventory.AddValue(itemName, quantity);
+            // Assert
+            // Use the Assert class to test conditions
+            Assert.IsNull(returnedItem);
+            Assert.AreEqual(0, returnedPrice);
 
-        //     // Assert
-        //     // Use the Assert class to test conditions
-        //     Assert.AreEqual(Mathf.Clamp(startAmount + quantity, 0, 100), inventory.InventoryList[0].amount);
+            // Clean Up
+            ScriptableObject.DestroyImmediate(shopPrices);
+        }
 
-        //     // Clean Up
-        //     ScriptableObject.DestroyImmediate(inventory);
-        // }
+        [Test]
+        public void get_item_from_populated_shop_prices()
+        {
+            // Prepare
+            ShopItemsPrices shopPrices = ScriptableObject.CreateInstance<ShopItemsPrices>();
+
+
+            for (int i = 0; i < 7; i++)
+            {
+                ShopItem newItem = new ShopItem();
+                newItem.itemName = "TestItem" + i;
+                newItem.price = 500 + 5 * i;
+
+                shopPrices.ItemList.Add(newItem);
+            }
+
+            // Act
+            ShopItem existingItem = shopPrices.GetItem("TestItem3");
+            int existingItemPrice = shopPrices.GetPrice("TestItem3");
+
+            ShopItem nonExistingItem = shopPrices.GetItem("aaaaaaaaa");
+            int nonExistingItemPrice = shopPrices.GetPrice("aaaaaaaaa");
+
+            ShopItem nullStringItem = shopPrices.GetItem(null);
+            int nullStringItemPrice = shopPrices.GetPrice(null);
+
+            ShopItem emptyStringItem = shopPrices.GetItem(string.Empty);
+            int emptyStringItemPrice = shopPrices.GetPrice(string.Empty);
+
+            // Assert
+            // Use the Assert class to test conditions
+            Assert.AreEqual(shopPrices.ItemList[3].itemName, existingItem.itemName);
+            Assert.AreEqual(shopPrices.ItemList[3].price, existingItem.price);
+            Assert.AreEqual(existingItem.price, existingItemPrice);
+
+            Assert.IsNull(nonExistingItem);
+            Assert.AreEqual(0, nonExistingItemPrice);
+
+            Assert.IsNull(nullStringItem);
+            Assert.AreEqual(0, nullStringItemPrice);
+
+            Assert.IsNull(emptyStringItem);
+            Assert.AreEqual(0, emptyStringItemPrice);
+
+            // Clean Up
+            ScriptableObject.DestroyImmediate(shopPrices);
+        }
     }
 }
 
