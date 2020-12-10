@@ -9,9 +9,6 @@ public class Emote : MonoBehaviour
     [SerializeField] private Sprite angrySprite = default;
     [SerializeField] private float balloonTimer = 1.5f;
 
-    Color opaque = new Color(1, 1, 1, 1);
-    Color transparent = new Color(1, 1, 1, 0);
-
     Image balloonImage;
     public bool isShowingBalloon = false;
 
@@ -32,15 +29,15 @@ public class Emote : MonoBehaviour
             balloonImage.sprite = angrySprite;
         }
 
-        balloonImage.color = opaque;
+        balloonImage.color = Color.white;
         yield return new WaitForSeconds(balloonTimer);
-        balloonImage.color = transparent;
+        balloonImage.color = Color.clear;
         isShowingBalloon = false;
     }
 
     private void OnDisable()
     {
-        balloonImage.color = transparent;
+        balloonImage.color = Color.clear;
         isShowingBalloon = false;
     }
 }

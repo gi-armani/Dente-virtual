@@ -8,9 +8,6 @@ public abstract class Bar : MonoBehaviour
     public float YellowUpperLimit = 0.65f;
     public float RedUpperLimit = 0.30f;
 
-    private Color GreenColor = new Color(0, 1, 0, 1);
-    private Color YellowColor = new Color(1, 1, 0, 1);
-    private Color RedColor = new Color(1, 0, 0, 1);
     GameObject fillBar;
 
     void Awake()
@@ -35,15 +32,15 @@ public abstract class Bar : MonoBehaviour
     {
         if (percentage < RedUpperLimit)
         {
-            return RedColor;
+            return Color.red;
         }
         else if (percentage < YellowUpperLimit)
         {
-            return YellowColor;
+            return Color.yellow;
         }
         else
         {
-            return GreenColor;
+            return Color.green;
         }
     }
 

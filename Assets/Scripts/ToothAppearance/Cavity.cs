@@ -17,9 +17,6 @@ public class Cavity : MonoBehaviour
     public float MediumLimit = 0.4f;
     public float LowerLimit = 0.2f;
 
-    Color opaque = new Color(1, 1, 1, 1);
-    Color transparent = new Color(1, 1, 1, 0);
-
     public void Start()
     {
         cavityImage = GetComponent<Image>();
@@ -28,7 +25,7 @@ public class Cavity : MonoBehaviour
     public void Update()
     {
         float percentage = BarValue.FillPercentage;
-        cavityImage.color = opaque;
+        cavityImage.color = Color.white;
         if (percentage < LowerLimit)
         {
             cavityImage.sprite = HardCavity;
@@ -43,7 +40,7 @@ public class Cavity : MonoBehaviour
         }
         else
         {
-            cavityImage.color = transparent;
+            cavityImage.color = Color.clear;
         }
     }
 }

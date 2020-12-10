@@ -10,8 +10,8 @@ public class MemoryGame : MonoBehaviour
     public int moneyReward;
     public GameObject dentinho;
     public GameObject[] Cards;
-    private int rows;
-    private int cols;
+    private int rows = 4;
+    private int cols = 3;
     public int mistakeCounter;
     public GameObject turnedCard1 = null;
     public GameObject turnedCard2 = null;
@@ -24,8 +24,6 @@ public class MemoryGame : MonoBehaviour
 
     void OnEnable()
     {
-        rows = 4;
-        cols = 3;
         mistakeCounter = 0;
         PositionCards();
         dentinho.SetActive(false);

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoneyAnimationCaller : MonoBehaviour
 {
-    [SerializeField] private Resources resources = default;
     [SerializeField] private Animator coins = default;
 
     void OnEnable()
