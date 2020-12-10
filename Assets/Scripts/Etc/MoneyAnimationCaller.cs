@@ -19,6 +19,6 @@ public class MoneyAnimationCaller : MonoBehaviour
 
     public void CallAnimation()
     {
-        coins.SetBool("WonMoney", true);
+        coins.Play("CoinJump");
     }
 }
