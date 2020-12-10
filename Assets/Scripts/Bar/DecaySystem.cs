@@ -44,7 +44,7 @@ public class DecaySystem : MonoBehaviour
 
     private void BarSelect()
     {
-        foreach(BarValues barValues in BarValuesArray)
+        foreach (BarValues barValues in BarValuesArray)
         {
             StartCoroutine(nameof(Decay), barValues);
         }
@@ -62,14 +62,14 @@ public class DecaySystem : MonoBehaviour
             return false;
         }
 
-        if(DateTime.TryParse(closedTimeStr, out DateTime closedDateTime))
+        if (DateTime.TryParse(closedTimeStr, out DateTime closedDateTime))
         {
             time = time.ToUniversalTime();
 
             double passedTime = (time - closedDateTime).TotalSeconds;
-            foreach(BarValues bar in BarValuesArray)
+            foreach (BarValues bar in BarValuesArray)
             {
-                int decayTimes = Mathf.FloorToInt((float) passedTime / bar.DecayCooldown);
+                int decayTimes = Mathf.FloorToInt((float)passedTime / bar.DecayCooldown);
                 bar.AddFillPercentage(-bar.DecayQuantity * decayTimes);
             }
             return true;

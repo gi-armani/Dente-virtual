@@ -14,6 +14,11 @@ public class MemoryGameUI : MonoBehaviour
         game.mistake += ManageText;
     }
 
+    private void OnDestroy()
+    {
+        game.mistake -= ManageText;
+    }
+
     void ManageText()
     {
         StartCoroutine(BlinkRed());
@@ -27,8 +32,8 @@ public class MemoryGameUI : MonoBehaviour
     public IEnumerator BlinkRed()
     {
         int i = 0;
-        while(i < 3)
-        {    
+        while (i < 3)
+        {
             text.color = Color.red;
             yield return new WaitForSeconds(.5f);
             text.color = Color.black;

@@ -12,6 +12,11 @@ public class MoneyAnimationCaller : MonoBehaviour
         Resources.MoneyAdded += CallAnimation;
     }
 
+    private void OnDisable()
+    {
+        Resources.MoneyAdded -= CallAnimation;
+    }
+
 
     public void CallAnimation()
     {

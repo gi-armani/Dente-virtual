@@ -52,7 +52,7 @@ public class ClothesItems : MonoBehaviour
             {
                 armor.SetActive(false);
             }
-            
+
             Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
             Dentinho.transform.Find("LongHair").gameObject.SetActive(false);
         }
@@ -88,7 +88,7 @@ public class ClothesItems : MonoBehaviour
             {
                 longHair.SetActive(false);
             }
-            
+
             Dentinho.transform.Find("ShortHair").gameObject.SetActive(false);
             Dentinho.transform.Find("Armor").gameObject.SetActive(false);
         }
