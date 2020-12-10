@@ -15,7 +15,7 @@ public class SpecificShopScreen : MonoBehaviour
     [SerializeField] private GameObject Armor = default;
     [SerializeField] private GameObject ShortHair = default;
     [SerializeField] private GameObject LongHair = default;
-    
+
     private bool isCapeActive = false;
     private bool isArmorActive = false;
     private bool isLongHairActive = false;

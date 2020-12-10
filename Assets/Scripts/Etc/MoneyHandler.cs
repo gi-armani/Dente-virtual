@@ -8,14 +8,14 @@ public class MoneyHandler : MonoBehaviour
 {
     [SerializeField] private Resources resources = default;
     private TextMeshProUGUI textComponent;
-    private Color red = new Color(1,0,0,1);
-    private Color black = new Color(0,0,0,1);
+    private Color red = new Color(1, 0, 0, 1);
+    private Color black = new Color(0, 0, 0, 1);
 
     public IEnumerator BlinkRed()
     {
         int i = 0;
-        while(i < 3)
-        {    
+        while (i < 3)
+        {
             textComponent.color = red;
             yield return new WaitForSeconds(.5f);
             textComponent.color = black;
@@ -23,7 +23,7 @@ public class MoneyHandler : MonoBehaviour
             i++;
         }
     }
-    
+
     void OnEnable()
     {
         Resources.MoneyChanged += UpdateMoneyText;

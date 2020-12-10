@@ -40,7 +40,6 @@ public class NameHandler : MonoBehaviour
     {
         if (!String.IsNullOrEmpty(inputField.text))
         {
-            Debug.Log(GetPath());
             File.WriteAllText(GetPath(), inputField.text);
             SceneManager.LoadScene(1);
         }

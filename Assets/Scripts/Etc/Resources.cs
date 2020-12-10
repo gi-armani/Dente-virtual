@@ -14,7 +14,7 @@ public class Resources : PersistentScriptableObject
     {
         Money += value;
         MoneyChanged?.Invoke();
-        if(value > 0)
+        if (value > 0)
         {
             MoneyAdded?.Invoke();
         }

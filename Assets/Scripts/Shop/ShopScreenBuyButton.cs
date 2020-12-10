@@ -19,8 +19,8 @@ public class ShopScreenBuyButton : MonoBehaviour
     public void BuyItem()
     {
         var itemName = caller.transform.parent.name;
-        int price =  prices.GetPrice(itemName);
-        if(resources.Money >= price)
+        int price = prices.GetPrice(itemName);
+        if (resources.Money >= price)
         {
             resources.AddMoney(-(price));
             inventory.AddValue(itemName, 1);

@@ -33,7 +33,7 @@ public class ShopScreenItem : MonoBehaviour
     {
         var defaultScript = buyButton.GetComponent<ShopScreenBuyButton>();
 
-        if(defaultScript != null)
+        if (defaultScript != null)
         {
             var caller = defaultScript.caller;
 

@@ -11,7 +11,6 @@ public class SaveData : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveAll();
-        Debug.Log("Saved Data On Quit");
     }
 
     private void OnApplicationFocus(bool focus)
@@ -19,23 +18,8 @@ public class SaveData : MonoBehaviour
         if (!focus)
         {
             SaveAll();
-            Debug.Log("Saved Data on Focus == false");
         }
     }
-
-    /*
-    /// <summary>
-    /// Is not calling on Android
-    /// </summary>
-    private void OnApplicationPause(bool pause)
-    {
-        if (pause)
-        {
-            SaveAll();
-            Debug.Log("Saved Data on Pause == true");
-        }
-    }
-    */
 
     private void SaveAll()
     {

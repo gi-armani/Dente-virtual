@@ -21,12 +21,10 @@ public class DecaySystem : MonoBehaviour
         if (!focus)
         {
             Save(DateTime.Now);
-            Debug.Log("Sem foco");
         }
         else
         {
             Load(DateTime.Now);
-            Debug.Log("Com foco");
         }
     }
 

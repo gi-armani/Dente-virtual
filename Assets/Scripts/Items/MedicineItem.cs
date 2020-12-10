@@ -8,7 +8,7 @@ public class MedicineItem : DraggableItem
 
     [SerializeField] private GameEvent useMedicineWhenSick = default;
     [SerializeField] private GameEvent useMedicineWhenHealthy = default;
-    
+
     private void Start()
     {
         thermometer = GameObject.Find("Thermometer").GetComponent<Thermometer>();

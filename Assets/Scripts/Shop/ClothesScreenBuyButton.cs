@@ -22,16 +22,20 @@ public class ClothesScreenBuyButton : MonoBehaviour
         var itemName = caller.transform.parent.name;
         var price = prices.GetPrice(itemName);
 
-        if(resources.Money >= price)
+        if (resources.Money >= price)
         {
-            if(!wardrobe.PlayerHas(itemName)){
+            if (!wardrobe.PlayerHas(itemName))
+            {
                 resources.AddMoney(-(price));
                 wardrobe.AddClothes(itemName);
 
                 bool isDev = true;
-                if(isDev){
+                if (isDev)
+                {
                     caller.transform.parent.gameObject.SetActive(false);
-                } else{
+                }
+                else
+                {
                     Object.Destroy(caller.transform.parent.gameObject);
                 }
 

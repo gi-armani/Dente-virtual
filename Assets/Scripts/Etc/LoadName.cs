@@ -14,13 +14,13 @@ public class LoadName : MonoBehaviour
     {
         if (String.IsNullOrEmpty(dentinhoName))
         {
-            if(File.Exists(NameHandler.GetPath()))
+            if (File.Exists(NameHandler.GetPath()))
                 dentinhoName = File.ReadAllText(NameHandler.GetPath());
             else
                 dentinhoName = "Dentinho";
         }
-        
-        
+
+
         text.SetText(dentinhoName);
     }
 

@@ -88,9 +88,9 @@ public class MemoryGame : MonoBehaviour
             return true;
         }
         else
-        {   
+        {
             mistake?.Invoke();
-            if(++mistakeCounter > maxMistakes)
+            if (++mistakeCounter > maxMistakes)
             {
                 ResetCards();
             }

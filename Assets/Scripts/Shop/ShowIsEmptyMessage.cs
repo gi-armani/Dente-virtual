@@ -13,7 +13,7 @@ public class ShowIsEmptyMessage : MonoBehaviour
     public void ShowMessage()
     {
         bool hasActiveChild = false;
-        foreach(Transform child in parent)
+        foreach (Transform child in parent)
         {
             if (child.gameObject.activeSelf)
             {
