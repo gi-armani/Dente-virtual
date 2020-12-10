@@ -5017,7 +5017,7 @@ PrefabInstance:
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 635.95496
+      value: 635.95483
       objectReference: {fileID: 0}
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
@@ -6838,7 +6838,7 @@ PrefabInstance:
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 635.95496
+      value: 635.95483
       objectReference: {fileID: 0}
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
@@ -19041,7 +19041,7 @@ PrefabInstance:
     - target: {fileID: 2155139964992749096, guid: 1ed548d51e899754cb569196f97b7580,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 127.34296
+      value: 127.34302
       objectReference: {fileID: 0}
     - target: {fileID: 2155139964992749096, guid: 1ed548d51e899754cb569196f97b7580,
         type: 3}
@@ -20980,7 +20980,7 @@ PrefabInstance:
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 635.95496
+      value: 635.95483
       objectReference: {fileID: 0}
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
@@ -25784,7 +25784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.23456, y: -200.00009}
+  m_AnchoredPosition: {x: 190.23462, y: -200.00009}
   m_SizeDelta: {x: 388, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2347337755385201221
@@ -27421,7 +27421,7 @@ PrefabInstance:
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 635.95496
+      value: 635.95483
       objectReference: {fileID: 0}
     - target: {fileID: 4723944191082131146, guid: 2dd656846ff79354dbe6ab198224d45f,
         type: 3}
@@ -29763,32 +29763,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &6951200107271961227
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6951200107466875980}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 7.9509163, y: 46.80669}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 145.36343, y: 16.941917}
-  m_EdgeRadius: 0
 --- !u!114 &6951200107303976714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29956,6 +29930,8 @@ MonoBehaviour:
   movingBrush: {fileID: 6951200107466875980}
   mainCamera: {fileID: 519420031}
   fillToothPaste: {fileID: 577368312}
+  bubblePrefab: {fileID: 3483004105362183260, guid: 7988057fe1e08d6c09cca386f3d1fd03,
+    type: 3}
 --- !u!114 &6951200107466875978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30007,7 +29983,6 @@ GameObject:
   - component: {fileID: 6951200107466875978}
   - component: {fileID: 6951200107466875976}
   - component: {fileID: 6951200107271961224}
-  - component: {fileID: 6951200107271961227}
   - component: {fileID: 6951200107795133340}
   m_Layer: 5
   m_Name: MovingToothBrush
