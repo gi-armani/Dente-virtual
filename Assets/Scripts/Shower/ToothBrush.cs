@@ -9,6 +9,7 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     [SerializeField] private Camera mainCamera = null;
     [SerializeField] private FillToothPaste fillToothPaste = null;
+    [SerializeField] private GameObject bubblePrefab = null;
 
     private Vector3 _initialPosition = Vector3.zero;
     public static Action ReleasedToothBrush;
@@ -43,17 +44,18 @@ public class ToothBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         instantiateImage(movingBrush.transform.position);
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other)
+    {
         // NÃO TA FUNCIONANDO
-        if(other.gameObject.name == "Dente"){
+        if (other.gameObject.name == "Dente")
+        {
             instantiateImage(movingBrush.transform.position);
         }
     }
 
-    private void instantiateImage(Vector3 position){
+    private void instantiateImage(Vector3 position)
+    {
         var canvas = GameObject.Find("Canvas");
-        // Pega referência ao prefab de Bubble
-        var bubblePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Bubble.prefab");
         // Instancia uma bubble na posição
         var screenToOpen = GameObject.Instantiate(bubblePrefab, position, Quaternion.identity, canvas.transform);
     }
