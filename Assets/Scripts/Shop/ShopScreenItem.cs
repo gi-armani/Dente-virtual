@@ -21,6 +21,7 @@ public class ShopScreenItem : MonoBehaviour
     private void OnDisable()
     {
         buyButton.SetActive(false);
+        checkImage.GetComponent<Image>().color = Color.clear;
     }
 
     void Start()
