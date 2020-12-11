@@ -8,6 +8,8 @@ public class MedicineItem : DraggableItem
 
     [SerializeField] private GameEvent useMedicineWhenSick = default;
     [SerializeField] private GameEvent useMedicineWhenHealthy = default;
+    [SerializeField] private Resources resources = default;
+    [SerializeField] private int moneyReward = default;
 
     private void Start()
     {
@@ -21,6 +23,7 @@ public class MedicineItem : DraggableItem
         {
             if (thermometer.isSick)
             {
+                resources.AddMoney(moneyReward);
                 StartCoroutine(emote.ShowBalloon(true));
                 UseItem();
                 useMedicineWhenSick.Raise();
