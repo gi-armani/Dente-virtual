@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemList:
   - itemName: Apple
-    price: 5
+    price: 2
   - itemName: Banana
     price: 5
   - itemName: Salad
@@ -22,18 +22,18 @@ MonoBehaviour:
   - itemName: Grape
     price: 5
   - itemName: Water
-    price: 20
+    price: 2
   - itemName: Carrot
-    price: 5
+    price: 7
   - itemName: Brigadeiro
     price: 5
   - itemName: Candy
-    price: 5
+    price: 2
   - itemName: Lollipop
-    price: 5
+    price: 8
   - itemName: Soda
-    price: 20
+    price: 15
   - itemName: Cookie
-    price: 20
+    price: 15
   - itemName: Chips
     price: 20

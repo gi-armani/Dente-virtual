@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemList:
   - itemName: Grape
-    price: 15
+    price: 25
   - itemName: Strawberry
-    price: 15
+    price: 25
   - itemName: Tutti-frutti
-    price: 15
+    price: 25
