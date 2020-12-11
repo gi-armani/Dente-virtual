@@ -24627,7 +24627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfce09192a80cc489e46c0d45c1932e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyReward: 500
+  moneyReward: 15
   dentinho: {fileID: 25091109}
   Cards:
   - {fileID: 1599083068}
