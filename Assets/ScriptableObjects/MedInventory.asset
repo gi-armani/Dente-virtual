@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryList:
   - itemName: Grape
-    amount: 50
+    amount: 1
     healAmount: 0.5
+    IsHealthy: 0
   - itemName: Strawberry
-    amount: 50
+    amount: 1
     healAmount: 0.5
+    IsHealthy: 0
   - itemName: Tutti-frutti
-    amount: 50
+    amount: 1
     healAmount: 0.5
+    IsHealthy: 0
