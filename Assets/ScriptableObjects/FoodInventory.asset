@@ -15,49 +15,49 @@ MonoBehaviour:
   InventoryList:
   - itemName: Apple
     amount: 5
-    healAmount: 0.2
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Banana
     amount: 3
-    healAmount: 0.2
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Salad
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.3
     IsHealthy: 1
   - itemName: Grape
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Water
     amount: 3
-    healAmount: 0.2
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Carrot
-    amount: 1
-    healAmount: 0.2
+    amount: 3
+    healAmount: 0.3
     IsHealthy: 1
   - itemName: Brigadeiro
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.05
     IsHealthy: 0
   - itemName: Candy
     amount: 5
-    healAmount: 0.2
+    healAmount: 0.05
     IsHealthy: 0
   - itemName: Lollipop
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Soda
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Cookie
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Chips
     amount: 1
-    healAmount: 0.2
+    healAmount: 0.15
     IsHealthy: 0
