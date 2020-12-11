@@ -15,13 +15,13 @@ MonoBehaviour:
   InventoryList:
   - itemName: Grape
     amount: 1
-    healAmount: 0.5
+    healAmount: 1
     IsHealthy: 0
   - itemName: Strawberry
     amount: 1
-    healAmount: 0.5
+    healAmount: 1
     IsHealthy: 0
   - itemName: Tutti-frutti
     amount: 1
-    healAmount: 0.5
+    healAmount: 1
     IsHealthy: 0
