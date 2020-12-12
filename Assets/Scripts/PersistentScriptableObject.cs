@@ -35,9 +35,11 @@ public abstract class PersistentScriptableObject : ScriptableObject
         return Path.Combine(directoryPath, name + ".json");
     }
 
+#if !UNITY_EDITOR
     private void OnEnable()
     {
         string path = GetPath();
         Load(path);
     }
+#endif
 }

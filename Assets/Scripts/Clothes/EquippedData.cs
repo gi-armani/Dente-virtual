@@ -22,7 +22,9 @@ public class EquippedData : MonoBehaviour
         }
         if (focus)
         {
+#if !UNITY_EDITOR
             LoadData();
+#endif
         }
     }
 
