@@ -29,16 +29,8 @@ public class ClothesScreenBuyButton : MonoBehaviour
                 resources.AddMoney(-(price));
                 wardrobe.AddClothes(itemName);
 
-                bool isDev = true;
-                if (isDev)
-                {
-                    caller.transform.parent.gameObject.SetActive(false);
-                }
-                else
-                {
-                    Object.Destroy(caller.transform.parent.gameObject);
-                }
-
+                Object.Destroy(caller.transform.parent.gameObject);
+                
                 emptyMessageDisplayer.ShowMessage();
             }
         }
