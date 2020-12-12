@@ -16779,7 +16779,7 @@ PrefabInstance:
     - target: {fileID: 1887090421356759617, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: "Hmm que comida saud\xE1vel!"
+      value: "esse alimento \xE9 muito saud\xE1vel!"
       objectReference: {fileID: 0}
     - target: {fileID: 1887090421356759622, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
@@ -16941,7 +16941,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Isso me faz mal...
+          m_StringArgument: "esse alimento n\xE3o \xE9 nutritivo para mim, ainda
+            estou fraco"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1500519327
