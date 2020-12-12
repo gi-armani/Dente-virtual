@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 25091112}
   - component: {fileID: 25091113}
   - component: {fileID: 25091111}
+  - component: {fileID: 25091114}
   m_Layer: 5
   m_Name: Dente
   m_TagString: Untagged
@@ -214,6 +215,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b89af30394452f4c8de87486ce12330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &25091114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25091109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ccb6421c8acd2408e17d854e036769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClothGameObjects:
+  - {fileID: 2025748734}
+  - {fileID: 307405309}
+  - {fileID: 1488575288}
+  - {fileID: 2065653991}
 --- !u!1 &37031554 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6363724696359506629, guid: 09cee2f92e3671f4695435be3a584440,
