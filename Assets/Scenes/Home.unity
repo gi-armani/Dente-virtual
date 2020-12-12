@@ -12968,7 +12968,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Esse fl\xFAor me curou!"
+          m_StringArgument: "o fl\xFAor \xE9 um rem\xE9dio que me deixa muito forte
+            e saud\xE1vel!"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1205141710 stripped
@@ -24121,7 +24122,7 @@ PrefabInstance:
     - target: {fileID: 1887090421356759617, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: "N\xE3o \xE9 hora do fl\xFAor"
+      value: "voc\xEA n\xE3o pode usar tantos rem\xE9dios de uma vez"
       objectReference: {fileID: 0}
     - target: {fileID: 1887090421356759622, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
