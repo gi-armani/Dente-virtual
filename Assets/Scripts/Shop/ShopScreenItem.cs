@@ -7,7 +7,6 @@ using TMPro;
 
 public class ShopScreenItem : MonoBehaviour
 {
-    // [SerializeField] private GameObject dentinho = default;
     [SerializeField] private GameObject buyButton = default;
     [SerializeField] private TextMeshProUGUI text = default;
     [SerializeField] private ShopItemsPrices price = default;
