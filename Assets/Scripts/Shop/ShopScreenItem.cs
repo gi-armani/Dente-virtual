@@ -7,6 +7,7 @@ using TMPro;
 
 public class ShopScreenItem : MonoBehaviour
 {
+    // [SerializeField] private GameObject dentinho = default;
     [SerializeField] private GameObject buyButton = default;
     [SerializeField] private TextMeshProUGUI text = default;
     [SerializeField] private ShopItemsPrices price = default;
@@ -43,7 +44,17 @@ public class ShopScreenItem : MonoBehaviour
                 defaultScript.DisableCheck();
             }
 
-            buyButton.SetActive(true);
+            if (!buyButton.activeSelf)
+            {
+                buyButton.SetActive(true);
+                checkImage.GetComponent<Image>().color = opaque;
+            }
+            else
+            {
+                buyButton.SetActive(false);
+                checkImage.GetComponent<Image>().color = Color.clear;
+            }
+            
             checkImage.GetComponent<Image>().color = opaque;
             defaultScript.caller = checkImage;
         }
@@ -57,8 +68,17 @@ public class ShopScreenItem : MonoBehaviour
                 clothesScript.DisableCheck();
             }
 
-            buyButton.SetActive(true);
-            checkImage.GetComponent<Image>().color = opaque;
+            if (!buyButton.activeSelf)
+            {
+                buyButton.SetActive(true);
+                checkImage.GetComponent<Image>().color = opaque;
+            }
+            else
+            {
+                buyButton.SetActive(false);
+                checkImage.GetComponent<Image>().color = Color.clear;
+            }
+
             clothesScript.caller = checkImage;
         }
     }
