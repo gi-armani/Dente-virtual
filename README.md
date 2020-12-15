@@ -1,4 +1,6 @@
-# Dente-virtual 
+# Dente Virtual
+
+![Dente Virtual Logo](Assets/Sprites/Banner.png)
 
 ## Install instructions
 
@@ -11,7 +13,7 @@
 
 ### 3 - create a unity account and activate a license
   - just follow unity hub's instructions after installing and opening it
- 
+
 ### 4 - add the project folder to unity hub
   - with unity hub open
   - click the Add button on top
@@ -22,7 +24,7 @@
   - click on the warning symbol that appears in the project list (about unity version not being installed)
   - it should ask you if you want to install unity 2019.4.11f1
   - accept it
-  
+
 ### 6 - open the project for the first time
   - still with unity hub open
   - after unity 2019.4.11f1 has been installed
