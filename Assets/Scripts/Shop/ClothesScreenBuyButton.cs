@@ -30,7 +30,7 @@ public class ClothesScreenBuyButton : MonoBehaviour
                 wardrobe.AddClothes(itemName);
 
                 Object.Destroy(caller.transform.parent.gameObject);
-                
+
                 emptyMessageDisplayer.ShowMessage();
             }
         }
@@ -42,6 +42,8 @@ public class ClothesScreenBuyButton : MonoBehaviour
 
     public void DisableCheck()
     {
-        caller.GetComponent<Image>().color = Color.clear;
+        if (caller != null){
+            caller.GetComponent<Image>().color = Color.clear;
+        }
     }
 }

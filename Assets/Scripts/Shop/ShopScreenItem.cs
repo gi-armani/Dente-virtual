@@ -36,49 +36,58 @@ public class ShopScreenItem : MonoBehaviour
 
         if (defaultScript != null)
         {
-            var caller = defaultScript.caller;
+            var lastSelectedItem = defaultScript.caller;
+            var currentSelectedItem = checkImage;
 
-            if (caller != null)
-            {
-                defaultScript.DisableCheck();
-            }
-
-            if (!buyButton.activeSelf)
-            {
+            if(lastSelectedItem == currentSelectedItem){
+                if(IsCurrentItemCheckEnabled()){
+                    DisableCheckImage(currentSelectedItem);
+                    buyButton.SetActive(false);
+                } else {
+                    buyButton.SetActive(true);
+                    EnableCheckImage(currentSelectedItem);
+                }
+            } else {
+                DisableCheckImage(lastSelectedItem);
                 buyButton.SetActive(true);
-                checkImage.GetComponent<Image>().color = opaque;
+                EnableCheckImage(currentSelectedItem);
             }
-            else
-            {
-                buyButton.SetActive(false);
-                checkImage.GetComponent<Image>().color = Color.clear;
-            }
-            
-            checkImage.GetComponent<Image>().color = opaque;
-            defaultScript.caller = checkImage;
+
+            defaultScript.caller = currentSelectedItem;
         }
         else
         {
             var clothesScript = buyButton.GetComponent<ClothesScreenBuyButton>();
-            var caller = clothesScript.caller;
+            var lastSelectedItem = clothesScript.caller;
+            var currentSelectedItem = checkImage;
 
-            if (caller != null)
-            {
-                clothesScript.DisableCheck();
-            }
-
-            if (!buyButton.activeSelf)
-            {
+            if(lastSelectedItem == currentSelectedItem){
+                if(IsCurrentItemCheckEnabled()){
+                    DisableCheckImage(currentSelectedItem);
+                    buyButton.SetActive(false);
+                } else {
+                    buyButton.SetActive(true);
+                    EnableCheckImage(currentSelectedItem);
+                }
+            } else {
+                DisableCheckImage(lastSelectedItem);
                 buyButton.SetActive(true);
-                checkImage.GetComponent<Image>().color = opaque;
-            }
-            else
-            {
-                buyButton.SetActive(false);
-                checkImage.GetComponent<Image>().color = Color.clear;
+                EnableCheckImage(currentSelectedItem);
             }
 
-            clothesScript.caller = checkImage;
+            clothesScript.caller = currentSelectedItem;
         }
+    }
+
+    private void EnableCheckImage(GameObject image){
+        if(image) image.GetComponent<Image>().color = opaque;
+    }
+
+    private void DisableCheckImage(GameObject image){
+        if(image) image.GetComponent<Image>().color = Color.clear;
+    }
+
+    private bool IsCurrentItemCheckEnabled(){
+        return checkImage.GetComponent<Image>().color == opaque;
     }
 }
