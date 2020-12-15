@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FillPercentage: 1
   DecayCooldown: 5
-  DecayQuantity: 0.007
+  DecayQuantity: 0.0007
