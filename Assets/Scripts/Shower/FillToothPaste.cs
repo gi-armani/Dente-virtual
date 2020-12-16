@@ -64,7 +64,7 @@ public class FillToothPaste : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public bool VerifyScaleAmount()
     {
-        float threshold = 0.03f;
+        float threshold = 0.07f;
         bool biggerThan = (toothPasteBall.localScale.x >= desiredScale - threshold);
         bool lowerThan = (toothPasteBall.localScale.x <= desiredScale + threshold);
         return biggerThan && lowerThan;
