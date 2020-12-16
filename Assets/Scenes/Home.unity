@@ -5542,8 +5542,8 @@ MonoBehaviour:
         m_CallState: 2
   toothPasteBall: {fileID: 1710820123}
   scaleAmountPerTime: 0.5
-  desiredScale: 0.35
-  maxScale: 1
+  desiredScale: 0.4
+  maxScale: 1.2
   money: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
   moneyAmount: 20
   pasteScale: {fileID: 11400000, guid: 3d835c975f4a5194294589fbc78a4c71, type: 2}
@@ -11712,6 +11712,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1684871622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1069849015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1887090421356759619, guid: b8d0430fb8570d34e9dd5806a08b722a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1341221007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e0e270d81b729e79f6f9351d3522ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1083289064 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4566226287554514322, guid: 7de0a74d82152d9459dfa20d185a4014,
@@ -14884,12 +14896,12 @@ PrefabInstance:
     - target: {fileID: 1887090420733146442, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
       propertyPath: m_text
-      value: Coloque a pasta aqui
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.8
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
@@ -14904,7 +14916,27 @@ PrefabInstance:
     - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.8
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887090420733146443, guid: b8d0430fb8570d34e9dd5806a08b722a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1887090421356759617, guid: b8d0430fb8570d34e9dd5806a08b722a,
         type: 3}
@@ -29186,6 +29218,10 @@ MonoBehaviour:
   showerBar: {fileID: 11400000, guid: c83428ee597baaa4a86551bc1805ea2d, type: 2}
   resources: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
   moneyReward: 20
+  showerFeedbackHandler: {fileID: 1069849015}
+  homeFeedbackHandler: {fileID: 1527032524}
+  completeFeedbackText: "Muito bem! Esses s\xE3o os movimentos da escova\xE7\xE3o!"
+  incompleteFeedbackText: Ainda estou sujo =(
 --- !u!1 &6951200108292050320
 GameObject:
   m_ObjectHideFlags: 0

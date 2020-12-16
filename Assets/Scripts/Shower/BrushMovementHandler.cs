@@ -14,6 +14,11 @@ public class BrushMovementHandler : MonoBehaviour
     static GameObject lastUsedIcon;
     int movementsFinished = 0;
 
+    public FeedbackText showerFeedbackHandler;
+    public FeedbackText homeFeedbackHandler;
+    public string completeFeedbackText;
+    public string incompleteFeedbackText;
+
     public static void DisplayImage(GameObject movementImage, GameObject checkImage, GameObject iconImage)
     {
         lastActiveMovement?.SetActive(false);
@@ -35,6 +40,10 @@ public class BrushMovementHandler : MonoBehaviour
     {
         MovementTrigger.FinishedMovement -= CleanTooth;
         lastActiveMovement?.SetActive(false);
+        if (movementsFinished < 4)
+        {
+            homeFeedbackHandler.ShowTextWithTime(incompleteFeedbackText);
+        }
     }
 
     public void CleanTooth()
@@ -45,6 +54,7 @@ public class BrushMovementHandler : MonoBehaviour
         movementsFinished++;
         if (movementsFinished == 4)
         {
+            showerFeedbackHandler.ShowTextWithTime(completeFeedbackText);
             resources.AddMoney(moneyReward);
         }
     }
