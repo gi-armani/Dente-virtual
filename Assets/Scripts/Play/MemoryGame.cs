@@ -22,6 +22,9 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] public int maxMistakes = default;
     [SerializeField] private Resources resources = default;
 
+    public FeedbackText feedbackText;
+    public string feedbackTextString;
+
     void OnEnable()
     {
         mistakeCounter = 0;
@@ -80,6 +83,7 @@ public class MemoryGame : MonoBehaviour
             matchCounter++;
             if (matchCounter == victoryMatchGoal)
             {
+                feedbackText.ShowTextWithTime(feedbackTextString);
                 resources.AddMoney(moneyReward);
             }
 
