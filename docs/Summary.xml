@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>17/12/2020 - 18:53:26</Generatedon>
+    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Assemblies>4</Assemblies>
+    <Classes>66</Classes>
+    <Files>63</Files>
+    <Coveredlines>595</Coveredlines>
+    <Uncoveredlines>1344</Uncoveredlines>
+    <Coverablelines>1939</Coverablelines>
+    <Totallines>3588</Totallines>
+    <Linecoverage>30.6</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+  </Summary>
+  <Coverage>
+    <Assembly name="EditMode" classes="4" coverage="99.2" coveredlines="126" coverablelines="127" totallines="327" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Tests.BarValuesOfflineTest" coverage="100" coveredlines="32" coverablelines="32" totallines="76" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.BarValuesTests" coverage="100" coveredlines="30" coverablelines="30" totallines="86" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.inventory_addvalue_tests" coverage="93.7" coveredlines="15" coverablelines="16" totallines="60" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.ShopItemPricesTests" coverage="100" coveredlines="49" coverablelines="49" totallines="105" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+    <Assembly name="EventEditor" classes="1" coverage="0" coveredlines="0" coverablelines="7" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="RoboRyanTron.Unite2017.Events.EventEditor" coverage="0" coveredlines="0" coverablelines="7" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+    <Assembly name="PlayMode" classes="5" coverage="97" coveredlines="200" coverablelines="206" totallines="451" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Tests.ChangeScreenTests" coverage="100" coveredlines="41" coverablelines="41" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.DecaySystemTests" coverage="100" coveredlines="61" coverablelines="61" totallines="112" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.DraggableTest" coverage="0" coveredlines="0" coverablelines="6" totallines="29" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.HealthBarTests" coverage="100" coveredlines="45" coverablelines="45" totallines="97" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.MainBarTests" coverage="100" coveredlines="53" coverablelines="53" totallines="110" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+    <Assembly name="Scripts" classes="56" coverage="16.8" coveredlines="269" coverablelines="1599" totallines="3043" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="Bar" coverage="100" coveredlines="24" coverablelines="24" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="BarValues" coverage="100" coveredlines="8" coverablelines="8" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="BrushMovementHandler" coverage="9.7" coveredlines="4" coverablelines="41" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Bubble" coverage="0" coveredlines="0" coverablelines="3" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Card" coverage="0" coveredlines="0" coverablelines="43" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Cavity" coverage="12" coveredlines="3" coverablelines="25" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ChangeScreen" coverage="100" coveredlines="8" coverablelines="8" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ClothesItems" coverage="0" coveredlines="0" coverablelines="92" totallines="132" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ClothesScreenBuyButton" coverage="16.6" coveredlines="5" coverablelines="30" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DecaySystem" coverage="79.6" coveredlines="43" coverablelines="54" totallines="86" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Dirt" coverage="10.8" coveredlines="4" coverablelines="37" totallines="62" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DisableBoughtItems" coverage="20" coveredlines="3" coverablelines="15" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DisableClothes" coverage="0" coveredlines="0" coverablelines="10" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DraggableItem" coverage="6.8" coveredlines="3" coverablelines="44" totallines="75" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DropReceiver" coverage="0" coveredlines="0" coverablelines="7" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Emote" coverage="16" coveredlines="4" coverablelines="25" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="EquippedClothData" coverage="0" coveredlines="0" coverablelines="5" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="EquippedData" coverage="2.1" coveredlines="1" coverablelines="47" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ExpressionControl" coverage="12.5" coveredlines="4" coverablelines="32" totallines="59" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="FeedbackText" coverage="11.7" coveredlines="2" coverablelines="17" totallines="46" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="FillToothPaste" coverage="22.7" coveredlines="10" coverablelines="44" totallines="72" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="FoodItem" coverage="16.6" coveredlines="4" coverablelines="24" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="GoldDebug" coverage="14.2" coveredlines="1" coverablelines="7" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="HealthBar" coverage="100" coveredlines="19" coverablelines="19" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="HorizontalArrowPanel" coverage="9" coveredlines="6" coverablelines="66" totallines="101" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Inventory" coverage="93.7" coveredlines="15" coverablelines="16" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Item" coverage="100" coveredlines="1" coverablelines="1" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="LoadName" coverage="92.3" coveredlines="12" coverablelines="13" totallines="31" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MainBar" coverage="100" coveredlines="22" coverablelines="22" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MedBarFeedback" coverage="0" coveredlines="0" coverablelines="12" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MedicineItem" coverage="16.6" coveredlines="4" coverablelines="24" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MemoryGame" coverage="11.7" coveredlines="8" coverablelines="68" totallines="124" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MemoryGameUI" coverage="8" coveredlines="2" coverablelines="25" totallines="47" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MoneyAnimationCaller" coverage="10" coveredlines="1" coverablelines="10" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MoneyHandler" coverage="12" coveredlines="3" coverablelines="25" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MovementTrigger" coverage="8.3" coveredlines="2" coverablelines="24" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="NameHandler" coverage="10" coveredlines="3" coverablelines="30" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="PersistentScriptableObject" coverage="0" coveredlines="0" coverablelines="22" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="PlayScreen" coverage="0" coveredlines="0" coverablelines="6" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Randomizer" coverage="0" coveredlines="0" coverablelines="10" totallines="124" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ResetBarDebug" coverage="0" coveredlines="0" coverablelines="6" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Resources" coverage="0" coveredlines="0" coverablelines="12" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SaveData" coverage="5.2" coveredlines="1" coverablelines="19" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShopClothesItems" coverage="0" coveredlines="0" coverablelines="208" totallines="290" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShopItemsPrices" coverage="100" coveredlines="10" coverablelines="10" totallines="30" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShopScreen" coverage="0" coveredlines="0" coverablelines="6" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShopScreenBuyButton" coverage="18.1" coveredlines="4" coverablelines="22" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShopScreenItem" coverage="6.1" coveredlines="4" coverablelines="65" totallines="93" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShowerItem" coverage="11.1" coveredlines="2" coverablelines="18" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ShowIsEmptyMessage" coverage="11.1" coveredlines="2" coverablelines="18" totallines="29" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpecificClothesScreen" coverage="0" coveredlines="0" coverablelines="15" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpecificShopScreen" coverage="8.6" coveredlines="8" coverablelines="93" totallines="140" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Thermometer" coverage="21.4" coveredlines="3" coverablelines="14" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="ToothBrush" coverage="10" coveredlines="4" coverablelines="40" totallines="74" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="UnityEventInvoker" coverage="33.3" coveredlines="1" coverablelines="3" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Wardrobe" coverage="6.6" coveredlines="1" coverablelines="15" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>
