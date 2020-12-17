@@ -14,50 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryList:
   - itemName: Apple
-    amount: 73
-    healAmount: 0.2
+    amount: 5
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Banana
-    amount: 81
-    healAmount: 0.2
+    amount: 3
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Salad
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.3
     IsHealthy: 1
   - itemName: Grape
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Water
-    amount: 83
-    healAmount: 0.2
+    amount: 3
+    healAmount: 0.15
     IsHealthy: 1
   - itemName: Carrot
-    amount: 83
-    healAmount: 0.2
+    amount: 3
+    healAmount: 0.3
     IsHealthy: 1
   - itemName: Brigadeiro
-    amount: 77
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.05
     IsHealthy: 0
   - itemName: Candy
-    amount: 83
-    healAmount: 0.2
+    amount: 5
+    healAmount: 0.05
     IsHealthy: 0
   - itemName: Lollipop
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Soda
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Cookie
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.1
     IsHealthy: 0
   - itemName: Chips
-    amount: 83
-    healAmount: 0.2
+    amount: 1
+    healAmount: 0.15
     IsHealthy: 0

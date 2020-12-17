@@ -5,5 +5,3 @@ Co-authored-by: Gabriel Araújo <ga.briel@usp.br>
 Co-authored-by: Gabriel Michelassi <gabrielmichelassi@usp.br>
 Co-authored-by: Giovana Armani <giovana_armani@usp.br>
 Co-authored-by: Tiago Marino <tmsilva11@gmail.com>
-
-

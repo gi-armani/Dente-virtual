@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f7dab77f4d88b4295d43eaf1fab0bc, type: 3}
+  m_Name: FoodShopItemsPrices
+  m_EditorClassIdentifier: 
+  ItemList:
+  - itemName: Apple
+    price: 2
+  - itemName: Banana
+    price: 5
+  - itemName: Salad
+    price: 20
+  - itemName: Grape
+    price: 5
+  - itemName: Water
+    price: 2
+  - itemName: Carrot
+    price: 7
+  - itemName: Brigadeiro
+    price: 5
+  - itemName: Candy
+    price: 2
+  - itemName: Lollipop
+    price: 8
+  - itemName: Soda
+    price: 15
+  - itemName: Cookie
+    price: 15
+  - itemName: Chips
+    price: 20

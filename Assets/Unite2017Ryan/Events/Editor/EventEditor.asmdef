@@ -1,0 +1,17 @@
+{
+    "name": "EventEditor",
+    "references": [
+        "GUID:68064b43da6fd78318daf19276fe0f1e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

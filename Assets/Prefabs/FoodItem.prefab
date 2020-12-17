@@ -300,3 +300,7 @@ MonoBehaviour:
   BarValues: {fileID: 11400000, guid: f57ebd8a5aea1244fa03aaeebf592483, type: 2}
   QuantityText: {fileID: 2155139964628253349}
   DragImage: {fileID: 2155139964174563349}
+  healthFoodGiven: {fileID: 11400000, guid: 7fef29cb0da2038b09e97ad3d1453cc2, type: 2}
+  unhealthFoodGiven: {fileID: 11400000, guid: a119bf534c59ed3ed876e83e57452c00, type: 2}
+  resources: {fileID: 11400000, guid: 6b66577f65db42b46a6f7de4166b75d2, type: 2}
+  moneyReward: 50

@@ -29,81 +29,32 @@ namespace Tests
         }
 
         [Test]
-        public void add_1_to_item_with_0_quantity()
+        [TestCase(0, 1)]
+        [TestCase(0, -1)]
+        [TestCase(3, -10)]
+        [TestCase(3, 50)]
+        public void add_item_with_quantity(int startAmount, int quantity)
         {
             // Prepare
             Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
             const string itemName = "item";
-            inventory.InventoryList.Add(new Item { itemName = itemName, amount = 0 });
+
+            if(inventory.GetItem(itemName) == null)
+                inventory.InventoryList.Add(new Item { itemName = itemName, amount = startAmount });
+            else
+                inventory.InventoryList[0] = new Item { itemName = itemName, amount = startAmount };
 
             // Act
-            inventory.AddValue(itemName, 1);
+            inventory.AddValue(itemName, quantity);
 
             // Assert
             // Use the Assert class to test conditions
-            Assert.AreEqual(inventory.InventoryList[0].amount, 1);
+            Assert.AreEqual(Mathf.Clamp(startAmount + quantity, 0, 100), inventory.InventoryList[0].amount);
 
             // Clean Up
             ScriptableObject.DestroyImmediate(inventory);
         }
 
-        [Test]
-        public void add_negative_1_to_item_with_0_quantity()
-        {
-            // Prepare
-            Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
-            const string itemName = "item";
-            inventory.InventoryList.Add(new Item { itemName = itemName, amount = 0 });
-
-            // Act
-            inventory.AddValue(itemName, -1);
-
-            // Assert
-            // Use the Assert class to test conditions
-            Assert.AreEqual(inventory.InventoryList[0].amount, 0);
-
-            // Clean Up
-            ScriptableObject.DestroyImmediate(inventory);
-        }
-
-        [Test]
-        public void add_negative_10_to_item_with_3_quantity()
-        {
-            // Prepare
-            Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
-            const string itemName = "item";
-            inventory.InventoryList.Add(new Item { itemName = itemName, amount = 3 });
-
-            // Act
-            inventory.AddValue(itemName, -10);
-
-            // Assert
-            // Use the Assert class to test conditions
-            // Should be 0 are not be changed?
-            Assert.AreEqual(inventory.InventoryList[0].amount, 0);
-
-            // Clean Up
-            ScriptableObject.DestroyImmediate(inventory);
-        }
-
-        [Test]
-        public void add_50_to_item_with_3_quantity()
-        {
-            // Prepare
-            Inventory inventory = ScriptableObject.CreateInstance<Inventory>();
-            const string itemName = "item";
-            inventory.InventoryList.Add(new Item { itemName = itemName, amount = 3 });
-
-            // Act
-            inventory.AddValue(itemName, 50);
-
-            // Assert
-            // Use the Assert class to test conditions
-            Assert.AreEqual(inventory.InventoryList[0].amount, 53);
-
-            // Clean Up
-            ScriptableObject.DestroyImmediate(inventory);
-        }
     }
 }
 

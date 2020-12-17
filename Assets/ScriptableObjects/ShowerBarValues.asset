@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e25ae7dcc1cc44686394542173e6d3, type: 3}
   m_Name: ShowerBarValues
   m_EditorClassIdentifier: 
-  FillPercentage: 0.8
-  DecayCooldown: 10
-  DecayQuantity: 0.1
+  FillPercentage: 1
+  DecayCooldown: 5
+  DecayQuantity: 0.00004

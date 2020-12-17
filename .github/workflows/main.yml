@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main, develop, test-unity-test-runner ]
+    branches: [ main, develop, test-unity-test-runner, saving_on_android ]
   pull_request:
     branches: [ main, develop ]
 

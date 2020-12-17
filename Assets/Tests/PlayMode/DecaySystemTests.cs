@@ -13,6 +13,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator decay_system_decrease_fill_quantity_over_time()
         {
+            PlayerPrefs.DeleteKey(DecaySystem.closeDateKey);
             // Prepare Scene
             GameObject DecaySystemObject = new GameObject();
             DecaySystem system = DecaySystemObject.AddComponent<DecaySystem>();
@@ -40,6 +41,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator is_decaying_multiple_times([ValueSource("times")] float time)
         {
+            PlayerPrefs.DeleteKey(DecaySystem.closeDateKey);
             // Prepare Scene
             GameObject DecaySystemObject = new GameObject();
             DecaySystem system = DecaySystemObject.AddComponent<DecaySystem>();
@@ -68,6 +70,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator are_multiple_bars_decaying()
         {
+            PlayerPrefs.DeleteKey(DecaySystem.closeDateKey);
             // Prepare Scene
             GameObject DecaySystemObject = new GameObject();
             DecaySystem system = DecaySystemObject.AddComponent<DecaySystem>();
